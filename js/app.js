@@ -205,7 +205,7 @@ class App {
           <p class="dash-hero-subtitle">Leer authentiek Vlaams met meeslepende verhalen, drama, helden en een klikbare woordenschatvertaler!</p>
           <div class="dash-hero-actions">
             <button class="btn btn-primary btn-lg" id="btn-dash-start-stories">
-              📖 Ontdek de 4 Verhaallijnen
+              📖 Ontdek de ${STORIES_DATA.length} Verhaallijnen
             </button>
             <button class="btn btn-secondary btn-lg" id="btn-dash-open-flashcards">
               ⚡ Oefen Flitskaarten
@@ -245,7 +245,7 @@ class App {
       <!-- STORY ARCS OVERVIEW -->
       <div class="section-header-row">
         <div>
-          <h2 class="section-title">🎭 De 4 Verhaallijnen & Thema's</h2>
+          <h2 class="section-title">🎭 De ${STORIES_DATA.length} Verhaallijnen & Thema's</h2>
           <p class="section-subtitle">Kies een verhaal om te beginnen met lezen, luisteren en beslissingen nemen.</p>
         </div>
         <button class="btn btn-ghost" id="btn-see-all-stories">Bekijk Alles →</button>
@@ -364,95 +364,135 @@ class App {
     this.quiz.startStoryQuiz(story, chapterIndex);
   }
 
-  // --- GRAMMAR & TUSSENTAAL LAB VIEW ---
+  // --- GRAMMAR LAB: Nederlandse grammatica 1.1 -> 2.3 ---
   renderGrammarLab() {
     const container = document.getElementById('grammar-view');
     if (!container) return;
 
     const g = GRAMMAR_DATA;
-
-    // Tiny helper: render **bold** markdown from the data files as HTML
     const md = (s) => (s || '').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    const attr = (s) => (s || '').replace(/"/g, '&quot;');
 
-    // Reusable renderer for exercise blocks (used by all sections)
-    const renderExercises = (exercises, heading) => `
-      <div class="grammar-exercise-box">
-        <h3>⚡ ${heading}</h3>
-        <div class="exercise-items">
-          ${exercises.map(ex => `
-            <div class="grammar-quiz-item" data-ex-id="${ex.id}">
-              <p class="ex-sentence">${ex.sentence || ex.word}</p>
-              <div class="ex-options-row">
-                ${ex.options.map(opt => `
-                  <button class="btn btn-secondary btn-sm btn-grammar-opt" data-opt="${opt}" data-correct="${ex.correct}" data-explanation="${(ex.explanation || '').replace(/"/g, '&quot;')}">
-                    ${opt}
-                  </button>
-                `).join('')}
-              </div>
-              <div class="ex-feedback-box" id="ex-fb-${ex.id}" style="display: none;"></div>
-            </div>
+    const renderExercise = (ex) => `
+      <div class="grammar-quiz-item" data-ex-id="${ex.id}">
+        <p class="ex-sentence">${ex.sentence}</p>
+        <div class="ex-options-row">
+          ${ex.options.map(opt => `
+            <button class="btn btn-secondary btn-sm btn-grammar-opt"
+                    data-opt="${attr(opt)}"
+                    data-correct="${attr(ex.correct)}"
+                    data-explanation="${attr(ex.explanation)}">${opt}</button>
           `).join('')}
         </div>
+        <div class="ex-feedback-box" id="ex-fb-${ex.id}" style="display: none;"></div>
       </div>
+    `;
+
+    const renderTopic = (topic, levelId) => `
+      <details class="topic-block" data-topic-id="${topic.id}">
+        <summary class="topic-summary">
+          <span class="topic-name">${topic.title}</span>
+          <span class="topic-sub">${topic.subtitle}</span>
+          <span class="topic-chevron" aria-hidden="true">›</span>
+        </summary>
+        <div class="topic-body">
+          <p class="topic-intro">${md(topic.intro)}</p>
+          <p class="topic-intro-en">${topic.introEn}</p>
+
+          <div class="rule-list">
+            ${topic.rules.map(r => `
+              <div class="rule-row">
+                <div class="rule-head">
+                  <span class="rule-name">${r.rule}</span>
+                  <span class="rule-en">${r.en}</span>
+                </div>
+                <div class="rule-detail">${md(r.detail)}</div>
+                <div class="rule-examples">${md(r.examples)}</div>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="grammar-exercise-box">
+            <h4>⚡ Oefeningen</h4>
+            <div class="exercise-items">
+              ${topic.exercises.map(renderExercise).join('')}
+            </div>
+          </div>
+        </div>
+      </details>
     `;
 
     container.innerHTML = `
       <div class="grammar-header">
-        <h1 class="view-title">🧩 Grammatica Lab</h1>
-        <p class="view-subtitle">Ontdek waar het Vlaams écht van het Nederlands verschilt: niet in de voornaamwoorden, maar in woordenschat, uitroepen en uitdrukkingen.</p>
+        <h1 class="view-title">🧩 ${g.intro.title}</h1>
+        <p class="view-subtitle">${md(g.intro.description)}</p>
       </div>
 
-      <!-- SECTION 1: PRONOUNS — MODERN JE/JIJ -->
-      <div class="grammar-card">
-        <div class="grammar-card-header">
-          <span class="grammar-icon">🗣️</span>
-          <div>
-            <h2 class="grammar-title">${g.pronomenVerschillen.title}</h2>
-            <p class="grammar-desc">${md(g.pronomenVerschillen.description)}</p>
-          </div>
-        </div>
+      <div class="level-track">
+        ${g.levels.map(l => `<a class="level-chip" href="#grammar" data-jump="${l.id}">${l.icon} ${l.label}</a>`).join('')}
+      </div>
 
-        <div class="nrule-list">
-          <div class="nrule-row">
-            <div class="nrule-title">${g.pronomenVerschillen.realDifferences.title}</div>
-          </div>
-          ${g.pronomenVerschillen.realDifferences.items.map(item => `
-            <div class="nrule-row">
-              <div class="nrule-title">${item.label}</div>
-              <div class="nrule-example">${item.example}</div>
+      <div class="levels-wrap">
+        ${g.levels.map((level, i) => `
+          <details class="level-block" id="level-${level.id}" data-level-id="${level.id}" ${i === 0 ? 'open' : ''}>
+            <summary class="level-summary">
+              <span class="level-icon">${level.icon}</span>
+              <span class="level-meta">
+                <span class="level-label">${level.label}</span>
+                <span class="level-cefr">${level.cefr}</span>
+              </span>
+              <span class="level-summary-text">${level.summary}</span>
+              <span class="level-count">${level.topics.length} onderwerpen</span>
+            </summary>
+            <div class="level-body">
+              ${level.topics.map(t => renderTopic(t, level.id)).join('')}
             </div>
-          `).join('')}
-        </div>
-
-        ${renderExercises(g.pronomenVerschillen.exercises, "Oefen: Modern Belgisch Nederlands")}
+          </details>
+        `).join('')}
       </div>
     `;
 
-    // Attach Grammar exercise handlers
+    // Jump links: open the target level and scroll to it
+    container.querySelectorAll('.level-chip').forEach(chip => {
+      chip.onclick = (e) => {
+        e.preventDefault();
+        const target = container.querySelector(`#level-${CSS.escape(chip.dataset.jump)}`);
+        if (!target) return;
+        target.open = true;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+    });
+
+    // Exercise handlers
     container.querySelectorAll('.btn-grammar-opt').forEach(btn => {
       btn.onclick = () => {
+        const parent = btn.closest('.grammar-quiz-item');
+        if (parent.dataset.answered === 'true') return;
+        parent.dataset.answered = 'true';
+
         const selected = btn.dataset.opt;
         const correct = btn.dataset.correct;
-        const parent = btn.closest('.grammar-quiz-item');
         const fb = parent.querySelector('.ex-feedback-box');
-
-        parent.querySelectorAll('.btn-grammar-opt').forEach(b => b.classList.add('disabled'));
-
         const explanation = btn.dataset.explanation ? `<br><small>${btn.dataset.explanation}</small>` : '';
+
+        parent.querySelectorAll('.btn-grammar-opt').forEach(b => {
+          b.classList.add('disabled');
+          if (b.dataset.opt === correct) b.classList.add('is-correct-answer');
+        });
 
         fb.style.display = 'block';
         if (selected === correct) {
           btn.classList.add('correct');
           audioController.playChime('success');
-          this.addXP(15, 'Grammatica oefening juist');
+          this.addXP(15, 'Grammatica juist');
           fb.className = 'ex-feedback-box success-feedback';
-          fb.innerHTML = `✅ <strong>Uitstekend!</strong> Juiste vorm: <em>${correct}</em> (+15 XP)${explanation}`;
+          fb.innerHTML = `✅ <strong>Juist!</strong> ${correct} (+15 XP)${explanation}`;
         } else {
           btn.classList.add('incorrect');
           audioController.playChime('error');
           this.addXP(5, 'Grammatica geprobeerd');
           fb.className = 'ex-feedback-box error-feedback';
-          fb.innerHTML = `❌ <strong>Niet helemaal:</strong> Het juiste antwoord is <em>${correct}</em>.${explanation}`;
+          fb.innerHTML = `❌ <strong>Niet juist.</strong> Het antwoord is <em>${correct}</em>.${explanation}`;
         }
       };
     });
