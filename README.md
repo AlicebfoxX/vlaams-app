@@ -11,7 +11,7 @@ Een interactieve, verhaalgedreven webapplicatie om authentiek **Vlaams (Belgisch
 - ⚡ **Klikbare Woordenschatvertaler**: Klik op elk woord voor directe Engelse vertaling, Nederlands equivalent en uitspraak.
 - 🔊 **Audio & Dialoog**: Gesproken zinnen en microfoon-uitspraaktraining.
 - 📚 **Woordenschat Vault & 3D Flitskaarten**: Spaced repetition geheugentraining.
-- 🧩 **Tussentaal & Grammatica Lab**: *Gij/Ge*, *-ke* verkleinwoorden, en de mannelijke N-regel.
+- 🧩 **Grammatica Lab**: Modern *je/jij* en *-ke* verkleinwoorden.
 - 🎯 **Quiz Arena**: Verhaalquizzes, *Vlaams vs. Hollands* duels en spreekwoordendecoders.
 - 🛡️ **Cybersecurity Password Gate**: SHA-256 beveiligde toegang met sessievergrendeling (Wachtwoord: `vlaams2026`).
 
