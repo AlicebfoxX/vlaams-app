@@ -52,24 +52,24 @@ export const STORIES_DATA = [
         dialogues: [
           {
             speaker: "lucas",
-            text: "Goeiemorgen! Ge ziet er een beetje verkleumd uit. Wilt ge niet eerst een warme tas koffie drinken voor ge de boot opstapt?",
-            audioText: "Goeiemorgen! Ge ziet er een beetje verkleumd uit. Wilt ge niet eerst een warme tas koffie drinken voor ge de boot opstapt?",
-            highlightWords: ["Ge", "verkleumd", "tas koffie"],
-            contextNote: "Lucas gebruikt het typisch Vlaamse 'tas koffie' (geen kopje) en spreekt Elena aan met het informele 'ge'."
+            text: "Goeiemorgen! Jij ziet er een beetje verkleumd uit. Wil jij niet eerst een warme tas koffie drinken voor je de boot opstapt?",
+            audioText: "Goeiemorgen! Jij ziet er een beetje verkleumd uit. Wil jij niet eerst een warme tas koffie drinken voor je de boot opstapt?",
+            highlightWords: ["verkleumd", "tas koffie", "zalig"],
+            contextNote: "Lucas gebruikt het typisch Vlaamse 'tas koffie' (geen kopje!) en 'zalig' voor heerlijk."
           },
           {
             speaker: "elena",
-            text: "Oh, heel graag! Een tas koffie klinkt zalig. Maar zeg eens, kent gij de geheime doorgangen onder het Gravensteen?",
-            audioText: "Oh, heel graag! Een tas koffie klinkt zalig. Maar zeg eens, kent gij de geheime doorgangen onder het Gravensteen?",
-            highlightWords: ["tas koffie", "zalig", "gij"],
-            contextNote: "Elena probeert al 'gij' te gebruiken in plaats van het noordelijke 'jij'."
+            text: "Oh, heel graag! Een tas koffie klinkt zalig. Maar zeg eens, ken jij de geheime doorgangen onder het Gravensteen?",
+            audioText: "Oh, heel graag! Een tas koffie klinkt zalig. Maar zeg eens, ken jij de geheime doorgangen onder het Gravensteen?",
+            highlightWords: ["tas koffie", "zalig", "Gravensteen"],
+            contextNote: "'Zalig' is een heel Vlaams woord voor 'geweldig / heerlijk'. 'Tas koffie' is typisch Belgisch voor kopje koffie."
           },
           {
             speaker: "lucas",
-            text: "Amai, gij valt meteen met de deur in huis! Die kelders zijn al eeuwen afgesloten. Maar ik weet wel waar de sleutel van de oude beenhouwer ligt...",
-            audioText: "Amai, gij valt meteen met de deur in huis! Die kelders zijn al eeuwen afgesloten. Maar ik weet wel waar de sleutel van de oude beenhouwer ligt...",
-            highlightWords: ["Amai", "gij", "met de deur in huis vallen", "beenhouwer"],
-            contextNote: "'Amai' drukt Lucas' verbazing uit. 'Beenhouwer' is Vlaams voor slager."
+            text: "Amai, jij valt meteen met de deur in huis! Die kelders zijn al eeuwen afgesloten. Maar ik weet wel waar de sleutel van de oude beenhouwer ligt...",
+            audioText: "Amai, jij valt meteen met de deur in huis! Die kelders zijn al eeuwen afgesloten. Maar ik weet wel waar de sleutel van de oude beenhouwer ligt...",
+            highlightWords: ["Amai", "met de deur in huis vallen", "beenhouwer"],
+            contextNote: "'Amai' drukt verbazing uit — typisch Vlaams! 'Beenhouwer' is Vlaams voor slager (vleeswaren)."
           }
         ],
         dilemma: {
@@ -114,10 +114,10 @@ export const STORIES_DATA = [
           },
           {
             speaker: "lucas",
-            text: "Ge moet u niet ongerust maken, zulle. We duiken hier links het steegje in en gaan schuilen bij mijn nonkel.",
-            audioText: "Ge moet u niet ongerust maken, zulle. We duiken hier links het steegje in en gaan schuilen bij mijn nonkel.",
-            highlightWords: ["zulle", "nonkel"],
-            contextNote: "'Zulle' is een zachte Vlaamse klemtoonpartikel. 'Nonkel' is oom."
+            text: "Jij moet je niet ongerust maken, zulle. We duiken hier links het steegje in en gaan schuilen bij mijn nonkel.",
+            audioText: "Jij moet je niet ongerust maken, zulle. We duiken hier links het steegje in en gaan schuilen bij mijn nonkel.",
+            highlightWords: ["zulle", "nonkel", "schuilen"],
+            contextNote: "'Zulle' is een typisch Vlaamse verzachtende eindpartikel. 'Nonkel' is het Vlaamse woord voor oom."
           },
           {
             speaker: "van-hout",
@@ -132,9 +132,9 @@ export const STORIES_DATA = [
           options: [
             {
               id: "opt-1",
-              text: "Allee meneer, hebt ge nu echt niets beters te doen dan onschuldige toeristen lastig te vallen?",
+              text: "Allee meneer, hebt u nu echt niets beters te doen dan onschuldige toeristen lastig te vallen?",
               isCorrect: true,
-              feedback: "Sterk! 'Allee meneer' en 'hebt ge' zetten de juiste toon.",
+              feedback: "Sterk! 'Allee meneer' en beleefde 'u'-aanspraak zetten de juiste Vlaamse toon.",
               xp: 25
             },
             {
@@ -222,10 +222,10 @@ export const STORIES_DATA = [
           },
           {
             speaker: "jan",
-            text: "Zijt ge helemaal van de pot gerukt? Ons abdijbier is geen fabrieksdrank. Wij brouwen met geduld en passie!",
-            audioText: "Zijt ge helemaal van de pot gerukt? Ons abdijbier is geen fabrieksdrank. Wij brouwen met geduld en passie!",
-            highlightWords: ["Zijt ge", "van de pot gerukt"],
-            contextNote: "'Van de pot gerukt' is een sappige Vlaamse uitdrukking voor volkomen krankzinnig."
+            text: "Ben jij helemaal van de pot gerukt? Ons abdijbier is geen fabrieksdrank. Wij brouwen met geduld en passie!",
+            audioText: "Ben jij helemaal van de pot gerukt? Ons abdijbier is geen fabrieksdrank. Wij brouwen met geduld en passie!",
+            highlightWords: ["van de pot gerukt", "fabrieksdrank", "geduld"],
+            contextNote: "'Van de pot gerukt' is een sappige Vlaamse uitdrukking voor volkomen krankzinnig — dit is echte tussentaal!"
           },
           {
             speaker: "marcus",
@@ -247,9 +247,9 @@ export const STORIES_DATA = [
           options: [
             {
               id: "opt-1",
-              text: "Ge hebt zelfs geen goesting om te leren hoe ge een schuimkraag degusteert. Drink uw glas leeg en bol het af!",
+              text: "Jij hebt zelfs geen goesting om te leren hoe je een schuimkraag degusteert. Drink je glas leeg en bol het af!",
               isCorrect: true,
-              feedback: "Geweldig! 'Geen goesting', 'schuimkraag degusteren' en 'bol het af' (vertrek maar) zijn 100% authentiek!",
+              feedback: "Geweldig! 'Geen goesting', 'schuimkraag degusteren' en 'bol het af' (vertrek maar) zijn 100% authentiek Vlaams!",
               xp: 30
             },
             {
@@ -371,10 +371,10 @@ export const STORIES_DATA = [
         dialogues: [
           {
             speaker: "wout",
-            text: "Sofie, hebt ge twee minuten? Het is bijzonder ambetant, maar ge moet dit weten.",
-            audioText: "Sofie, hebt ge twee minuten? Het is bijzonder ambetant, maar ge moet dit weten.",
-            highlightWords: ["ambetant", "ge"],
-            contextNote: "'Ambetant' betekent vervelend of ongemakkelijk."
+            text: "Sofie, heb jij twee minuten? Het is bijzonder ambetant, maar jij moet dit weten.",
+            audioText: "Sofie, heb jij twee minuten? Het is bijzonder ambetant, maar jij moet dit weten.",
+            highlightWords: ["ambetant"],
+            contextNote: "'Ambetant' is een heel Vlaams woord voor 'vervelend / lastig'. Klinkt raar in Nederland maar iedereen in België begrijpt het!"
           },
           {
             speaker: "sofie",
@@ -486,10 +486,10 @@ export const STORIES_DATA = [
           },
           {
             speaker: "maya",
-            text: "Amai Luc, als dit uitlekt, valt de hele regering! Hebt ge harde bewijzen die we kunnen publiceren?",
-            audioText: "Amai Luc, als dit uitlekt, valt de hele regering! Hebt ge harde bewijzen die we kunnen publiceren?",
-            highlightWords: ["Amai", "Hebt ge"],
-            contextNote: "Maya gebruikt 'Hebt ge' in plaats van 'Heb je'."
+            text: "Amai Luc, als dit uitlekt, valt de hele regering! Heb jij harde bewijzen die we kunnen publiceren?",
+            audioText: "Amai Luc, als dit uitlekt, valt de hele regering! Heb jij harde bewijzen die we kunnen publiceren?",
+            highlightWords: ["Amai", "uitlekt", "bewijzen"],
+            contextNote: "'Amai' is een typisch Vlaamse uitroep van verbazing of ontzetting — je hoort het overal in België!"
           },
           {
             speaker: "oog9",
@@ -594,10 +594,10 @@ export const STORIES_DATA = [
         dialogues: [
           {
             speaker: "chapla",
-            text: "Wie durft er in MIJN moeras te plonzen?! Dit is privé terrein! Gij hoort hier niet thuis!",
-            audioText: "Wie durft er in MIJN moeras te plonzen?! Dit is privé terrein! Gij hoort hier niet thuis!",
-            highlightWords: ["Wie", "durft", "privé", "Gij", "hoort"],
-            contextNote: "'Gij' is het typisch Vlaamse woord voor 'jij'. Chapla is heel boos en spreekt heel formeel!"
+            text: "Wie durft er in MIJN moeras te plonzen?! Dit is privé terrein! Jij hoort hier niet thuis!",
+            audioText: "Wie durft er in MIJN moeras te plonzen?! Dit is privé terrein! Jij hoort hier niet thuis!",
+            highlightWords: ["Wie", "durft", "privé", "hoort"],
+            contextNote: "Chapla is heel boos! 'Durft' = dares, 'privé terrein' = private property, 'hoort hier niet thuis' = don't belong here."
           },
           {
             speaker: "timur",
@@ -608,17 +608,17 @@ export const STORIES_DATA = [
           },
           {
             speaker: "chapla",
-            text: "... Hmm. Gij zijt een dwaas kind. Maar ik laat u toch niet verzinken. Pak mijn vleugel vast — maar trek er NIET aan!",
-            audioText: "Hmm. Gij zijt een dwaas kind. Maar ik laat u toch niet verzinken. Pak mijn vleugel vast — maar trek er NIET aan!",
+            text: "... Hmm. Jij bent een dwaas kind. Maar ik laat je toch niet verzinken. Pak mijn vleugel vast — maar trek er NIET aan!",
+            audioText: "Hmm. Jij bent een dwaas kind. Maar ik laat je toch niet verzinken. Pak mijn vleugel vast — maar trek er NIET aan!",
             highlightWords: ["dwaas", "verzinken", "vleugel", "Pak"],
-            contextNote: "'Verzinken' betekent 'zinken / verdwijnen in de modder'. 'Dwaas' betekent 'foolish'."
+            contextNote: "'Verzinken' = to sink/disappear into the mud. 'Dwaas' = foolish. Chapla is tough but has a heart!"
           }
         ],
         dilemma: {
           question: "Chapla redt Timur uit de modder. Maar wat doet ze daarna?",
           options: [
             { text: "Ze stuurt hem weg: 'Mijn moeras is gevaarlijk voor kinderen!'", outcome: "Timur gaat weg... maar komt de volgende dag terug met een idee.", consequence: "chapla_warns" },
-            { text: "Ze laat hem blijven: 'Ge kunt één nacht in het riet slapen.'", outcome: "Timur en Chapla beginnen voorzichtig te praten. Een vriendschap begint!", consequence: "chapla_befriends" }
+            { text: "Ze laat hem blijven: 'Je kunt één nacht in het riet slapen.'", outcome: "Timur en Chapla beginnen voorzichtig te praten. Een vriendschap begint!", consequence: "chapla_befriends" }
           ]
         },
         vocabFocus: ["moeras", "reiger", "mist", "vleugel", "modder", "verzinken", "dwaas"]
@@ -675,10 +675,10 @@ export const STORIES_DATA = [
           },
           {
             speaker: "timur",
-            text: "Chapla, vlucht! Maak je geen zorgen om mij! Jij bent een vrije vogel! Vliegt gij alstublieft weg!",
-            audioText: "Chapla, vlucht! Maak je geen zorgen om mij! Jij bent een vrije vogel! Vliegt gij alstublieft weg!",
-            highlightWords: ["vlucht", "vrije", "vogel", "Vliegt"],
-            contextNote: "Timur zegt 'vliegt gij' — Vlaams voor 'vlieg jij'. 'Vrij' betekent 'free'."
+            text: "Chapla, vlucht! Maak je geen zorgen om mij! Jij bent een vrije vogel! Vlieg alsjeblieft weg!",
+            audioText: "Chapla, vlucht! Maak je geen zorgen om mij! Jij bent een vrije vogel! Vlieg alsjeblieft weg!",
+            highlightWords: ["vlucht", "vrije", "vogel", "Vlieg"],
+            contextNote: "'Vrij' = free. 'Vlieg weg' = fly away. Timur is bang maar denkt eerst aan Chapla!"
           },
           {
             speaker: "oude-kikker",
@@ -699,10 +699,10 @@ export const STORIES_DATA = [
         dialogues: [
           {
             speaker: "chapla",
-            text: "Timur... In al mijn jaren in dit moeras heb ik nooit een vriend gehad. Tot vandaag. Gij zijt nu één van ons. Van het moeras.",
-            audioText: "Timur... In al mijn jaren in dit moeras heb ik nooit een vriend gehad. Tot vandaag. Gij zijt nu één van ons. Van het moeras.",
+            text: "Timur... In al mijn jaren in dit moeras heb ik nooit een vriend gehad. Tot vandaag. Jij bent nu één van ons. Van het moeras.",
+            audioText: "Timur... In al mijn jaren in dit moeras heb ik nooit een vriend gehad. Tot vandaag. Jij bent nu één van ons. Van het moeras.",
             highlightWords: ["jaren", "vriend", "Tot", "vandaag", "één"],
-            contextNote: "'Tot vandaag' betekent 'until today'. Dit is de mooiste zin van het hele verhaal!"
+            contextNote: "'Tot vandaag' = until today. 'Één van ons' = one of us. De mooiste zin van het hele verhaal!"
           },
           {
             speaker: "timur",
@@ -731,10 +731,10 @@ export const STORIES_DATA = [
         explanation: "'Pas op!' is de klassieke Vlaamse waarschuwing die je overal hoort. Super handig!"
       },
       {
-        question: "Chapla zegt: 'Gij zijt nu één van ons.' Wat betekent 'gij zijt'?",
-        options: ["Jij bent", "Jij was", "Jij zult zijn"],
+        question: "Chapla zegt: 'Jij bent nu één van ons.' Wat betekent 'één van ons'?",
+        options: ["One of us / part of our group", "Number one in our team", "The only one here"],
         correctIndex: 0,
-        explanation: "'Gij zijt' is typisch Vlaams voor 'jij bent'. In tussentaal zegt men ook 'ge zijt' of gewoon 'ge bent'."
+        explanation: "'Één van ons' betekent 'one of us' — Chapla verwelkomt Timur als deel van het moeras. Wat een vriendschap!"
       },
       {
         question: "Timur zegt: 'Ik beloof het.' Wat betekent 'beloven'?",

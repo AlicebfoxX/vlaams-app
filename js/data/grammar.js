@@ -1,47 +1,58 @@
 // js/data/grammar.js - Flemish Grammar & Tussentaal Reference & Practice
 
 export const GRAMMAR_DATA = {
-  gijConjugations: {
-    title: "Het 'Gij / Ge' Systeem (Informal Second Person)",
-    description: "In Flanders, 'gij' (stressed) and 'ge' (unstressed) are used where Northern Dutch uses 'jij' and 'je'. Crucially, verbs conjugate with a **-t** ending in both present and past tense!",
+  // REPLACED old "Gij/Ge" section with accurate modern Belgian Dutch
+  pronomenVerschillen: {
+    title: "Persoonlijke Voornaamwoorden: Vlaams vs. Hollands",
+    description: "Modern Belgisch Nederlands gebruikt gewoon **je / jij** — precies zoals in Nederland. 'Ge' en 'Gij' hoor je zelden meer in het dagelijkse leven en worden als ouderwets beschouwd. Het echte verschil zit hem in de uitspraak, het woordgebruik en de zinsbouw!",
     comparisonTable: [
-      { verb: "zijn (to be)", jijForm: "jij bent / was", gijForm: "gij **zijt** / **waart**", example: "Gij **zijt** een slimme student." },
-      { verb: "hebben (to have)", jijForm: "je hebt / had", gijForm: "ge **hebt** / **hadt**", example: "Ge **hebt** chance vandaag!" },
-      { verb: "kunnen (can)", jijForm: "je kunt / kon", gijForm: "ge **kunt** / **kondt**", example: "Ge **kunt** dat rapport downloaden." },
-      { verb: "weten (to know)", jijForm: "jij weet / wist", gijForm: "gij **weet** / **wist**", example: "Gij **weet** goed wat ge wilt." },
-      { verb: "willen (to want)", jijForm: "je wil(t) / wilde", gijForm: "ge **wilt** / **wildet**", example: "Wilt ge een tas koffie?" }
+      { hollands: "jij / je", vlaams: "jij / je (identiek!)", example: "\"Jij hebt dat goed gedaan!\"", note: "✅ Gewoon hetzelfde" },
+      { hollands: "jij bent", vlaams: "jij bent", example: "\"Ben jij ook naar het feest geweest?\"", note: "✅ Hetzelfde" },
+      { hollands: "jij hebt", vlaams: "jij hebt", example: "\"Heb jij al een tas koffie gehad?\"", note: "✅ Hetzelfde" },
+      { hollands: "jij zegt", vlaams: "jij zegt", example: "\"Wat zeg jij ervan?\"", note: "✅ Hetzelfde" },
+      { hollands: "jullie", vlaams: "jullie", example: "\"Gaan jullie mee naar de frituur?\"", note: "✅ Hetzelfde" }
     ],
+    realDifferences: {
+      title: "Waar zit het ECHTE Vlaamse verschil?",
+      items: [
+        { label: "Woordenschat", example: "'gsm' (geen mobieltje), 'tas koffie' (geen kopje), 'frigo' (geen koelkast), 'goesting' (geen zin)" },
+        { label: "Verkleinwoorden op -ke", example: "'een pintje' → 'een pinteke', 'koekje' → 'koeksken'" },
+        { label: "Ne / Nen artikel", example: "'een boom' → 'nen boom', 'een man' → 'ne man'" },
+        { label: "Uitroepen", example: "'Amai!', 'Allee!', 'Diene!', 'Alleszins!', 'Zeker!'" },
+        { label: "Uitdrukkingen", example: "'Ik heb schrik' (niet: ik ben bang), ''k Peis' (ik denk/vermoed)" }
+      ]
+    },
     exercises: [
       {
-        id: "gij-1",
-        sentence: "Lucas, _____ gij zeker dat de schipper ons kan helpen?",
-        verbPrompt: "zijn (tegenwoordige tijd)",
-        options: ["bent", "zijt", "is"],
-        correct: "zijt",
-        explanation: "Met 'gij' is de vorm van 'zijn' altijd 'zijt' (Gij zijt)."
+        id: "pron-1",
+        sentence: "Lucas vraagt aan Elena: '_____ al koffie gehad vandaag?'",
+        verbPrompt: "Kies de correcte vraagzin",
+        options: ["Zijt gij", "Heb jij al", "Hebt ge"],
+        correct: "Heb jij al",
+        explanation: "In modern Belgisch Nederlands zeg je gewoon 'Heb jij al...' of 'Heb je al...'. 'Ge/Gij' is ouderwets."
       },
       {
-        id: "gij-2",
-        sentence: "_____ ge gisteren die geheime e-mail gezien?",
-        verbPrompt: "hebben (verleden/tegenwoordig)",
-        options: ["Heb", "Hebt", "Heeft"],
-        correct: "Hebt",
-        explanation: "Zelfs bij inversie blijft de -t behouden: 'Hebt ge' (niet 'heb je')."
+        id: "pron-2",
+        sentence: "Sofie zegt tegen haar collega: '_____ dat gisteren gezien?'",
+        verbPrompt: "Kies de meest naturele Vlaamse zin",
+        options: ["Hebt ge", "Heb jij", "Zijt gij"],
+        correct: "Heb jij",
+        explanation: "'Heb jij dat gezien?' is perfect correct modern Belgisch Nederlands. 'Ge/Gij' is niet meer in gebruik."
       },
       {
-        id: "gij-3",
-        sentence: "Elena, wat _____ gij drinken op het terras?",
-        verbPrompt: "willen",
-        options: ["wil", "wilt", "wilt gij"],
-        correct: "wilt",
-        explanation: "'Gij wilt' heeft altijd de -t uitgang."
+        id: "pron-3",
+        sentence: "Jan tegen Marcus: 'Ben _____ serieus of doe je maar alsof?'",
+        verbPrompt: "Vul het voornaamwoord in",
+        options: ["gij", "ge", "jij"],
+        correct: "jij",
+        explanation: "Modern Belgisch Nederlands: 'Ben jij serieus?' — perfect correct en natural!"
       }
     ]
   },
 
   diminutives: {
-    title: "Verkleinwoorden (-ke, -eke, -ske)",
-    description: "In Flanders, diminutives overwhelmingly use **-ke** or **-eke** instead of the Northern **-tje** or **-je**.",
+    title: "Verkleinwoorden (-ke, -eke, -ske) — Echt Vlaams!",
+    description: "DÍT is een echt Vlaams kenmerk! In Vlaanderen gebruiken we **-ke** of **-eke** als verkleinwoord in plaats van het Nederlandse **-tje** of **-je**. Dit hoor je nog overal in het dagelijkse leven!",
     examples: [
       { base: "koek (biscuit)", standardNL: "koekje", vlaams: "koekske / koeksken" },
       { base: "man (man)", standardNL: "mannetje", vlaams: "manneke" },
@@ -69,8 +80,8 @@ export const GRAMMAR_DATA = {
   },
 
   articlesNRule: {
-    title: "De Mannelijke N-Regel (Ne / Nen & Den)",
-    description: "In informal Flemish (tussentaal), masculine words take **ne** or **nen** instead of 'een', and **den** instead of 'de'. The -n is added before **vowels, b, d, t, and h** (the B-D-T-H + Klinker rule)!",
+    title: "De Mannelijke N-Regel (Ne / Nen & Den) — Uniek Vlaams!",
+    description: "In informeel Vlaams (tussentaal) krijgen mannelijke woorden **ne** of **nen** in plaats van 'een', en **den** in plaats van 'de'. De -n wordt toegevoegd voor **klinkers, b, d, t en h** (de B-D-T-H + Klinker regel)!",
     rules: [
       { rule: "Voor een Klinker (a, e, i, o, u)", example: "**nen** appel, **nen** ottomobiel", standard: "een appel, een auto" },
       { rule: "Voor B, D, T, H", example: "**nen** boom, **nen** dief, **nen** trein, **nen** hond", standard: "een boom, een dief, een trein, een hond" },
