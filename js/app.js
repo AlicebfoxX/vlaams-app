@@ -371,19 +371,44 @@ class App {
 
     const g = GRAMMAR_DATA;
 
+    // Tiny helper: render **bold** markdown from the data files as HTML
+    const md = (s) => (s || '').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+    // Reusable renderer for exercise blocks (used by all sections)
+    const renderExercises = (exercises, heading) => `
+      <div class="grammar-exercise-box">
+        <h3>⚡ ${heading}</h3>
+        <div class="exercise-items">
+          ${exercises.map(ex => `
+            <div class="grammar-quiz-item" data-ex-id="${ex.id}">
+              <p class="ex-sentence">${ex.sentence || ex.word}</p>
+              <div class="ex-options-row">
+                ${ex.options.map(opt => `
+                  <button class="btn btn-secondary btn-sm btn-grammar-opt" data-opt="${opt}" data-correct="${ex.correct}" data-explanation="${(ex.explanation || '').replace(/"/g, '&quot;')}">
+                    ${opt}
+                  </button>
+                `).join('')}
+              </div>
+              <div class="ex-feedback-box" id="ex-fb-${ex.id}" style="display: none;"></div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
     container.innerHTML = `
       <div class="grammar-header">
-        <h1 class="view-title">🧩 Tussentaal & Grammatica Lab</h1>
-        <p class="view-subtitle">Ontdek hoe Vlamingen echt spreken: van <em>gij/ge</em> vervoegingen tot <em>-ke</em> verkleinwoorden en de mannelijke N-regel.</p>
+        <h1 class="view-title">🧩 Grammatica Lab</h1>
+        <p class="view-subtitle">Ontdek hoe Vlamingen echt spreken: modern <em>je/jij</em> zoals overal, plus de échte Vlaamse kenmerken — <em>-ke</em> verkleinwoorden en de mannelijke N-regel.</p>
       </div>
 
-      <!-- SECTION 1: GIJ / GE SYSTEM -->
+      <!-- SECTION 1: PRONOUNS — MODERN JE/JIJ -->
       <div class="grammar-card">
         <div class="grammar-card-header">
           <span class="grammar-icon">🗣️</span>
           <div>
-            <h2 class="grammar-title">${g.gijConjugations.title}</h2>
-            <p class="grammar-desc">${g.gijConjugations.description}</p>
+            <h2 class="grammar-title">${g.pronomenVerschillen.title}</h2>
+            <p class="grammar-desc">${md(g.pronomenVerschillen.description)}</p>
           </div>
         </div>
 
@@ -391,43 +416,38 @@ class App {
           <table class="grammar-table">
             <thead>
               <tr>
-                <th>Werkwoord</th>
-                <th>Hollands (Jij / Je)</th>
-                <th>Vlaams Tussentaal (Gij / Ge)</th>
+                <th>Nederland</th>
+                <th>Vlaanderen</th>
                 <th>Voorbeeldzin</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
-              ${g.gijConjugations.comparisonTable.map(row => `
+              ${g.pronomenVerschillen.comparisonTable.map(row => `
                 <tr>
-                  <td><strong>${row.verb}</strong></td>
-                  <td>${row.jijForm}</td>
-                  <td class="cell-vlaams">${row.gijForm}</td>
-                  <td><em>"${row.example}"</em></td>
+                  <td><strong>${row.hollands}</strong></td>
+                  <td class="cell-vlaams">${row.vlaams}</td>
+                  <td><em>${row.example}</em></td>
+                  <td>${row.note}</td>
                 </tr>
               `).join('')}
             </tbody>
           </table>
         </div>
 
-        <div class="grammar-exercise-box">
-          <h3>⚡ Oefen de 'Gij/Ge' Vorm</h3>
-          <div class="exercise-items">
-            ${g.gijConjugations.exercises.map((ex, idx) => `
-              <div class="grammar-quiz-item" data-ex-id="${ex.id}">
-                <p class="ex-sentence">${ex.sentence}</p>
-                <div class="ex-options-row">
-                  ${ex.options.map(opt => `
-                    <button class="btn btn-secondary btn-sm btn-grammar-opt" data-opt="${opt}" data-correct="${ex.correct}">
-                      ${opt}
-                    </button>
-                  `).join('')}
-                </div>
-                <div class="ex-feedback-box" id="ex-fb-${ex.id}" style="display: none;"></div>
-              </div>
-            `).join('')}
+        <div class="nrule-list">
+          <div class="nrule-row">
+            <div class="nrule-title">${g.pronomenVerschillen.realDifferences.title}</div>
           </div>
+          ${g.pronomenVerschillen.realDifferences.items.map(item => `
+            <div class="nrule-row">
+              <div class="nrule-title">${item.label}</div>
+              <div class="nrule-example">${item.example}</div>
+            </div>
+          `).join('')}
         </div>
+
+        ${renderExercises(g.pronomenVerschillen.exercises, "Oefen: Modern Belgisch Nederlands")}
       </div>
 
       <!-- SECTION 2: DIMINUTIVES (-KE) -->
@@ -436,7 +456,7 @@ class App {
           <span class="grammar-icon">🍪</span>
           <div>
             <h2 class="grammar-title">${g.diminutives.title}</h2>
-            <p class="grammar-desc">${g.diminutives.description}</p>
+            <p class="grammar-desc">${md(g.diminutives.description)}</p>
           </div>
         </div>
 
@@ -450,6 +470,8 @@ class App {
             </div>
           `).join('')}
         </div>
+
+        ${renderExercises(g.diminutives.exercises, "Oefen de Verkleinwoorden")}
       </div>
 
       <!-- SECTION 3: MASCULINE N-RULE -->
@@ -458,7 +480,7 @@ class App {
           <span class="grammar-icon">🌳</span>
           <div>
             <h2 class="grammar-title">${g.articlesNRule.title}</h2>
-            <p class="grammar-desc">${g.articlesNRule.description}</p>
+            <p class="grammar-desc">${md(g.articlesNRule.description)}</p>
           </div>
         </div>
 
@@ -466,11 +488,13 @@ class App {
           ${g.articlesNRule.rules.map(r => `
             <div class="nrule-row">
               <div class="nrule-title">${r.rule}</div>
-              <div class="nrule-example">${r.example}</div>
+              <div class="nrule-example">${md(r.example)}</div>
               <div class="nrule-std">Standaard: ${r.standard}</div>
             </div>
           `).join('')}
         </div>
+
+        ${renderExercises(g.articlesNRule.exercises, "Oefen de N-Regel")}
       </div>
     `;
 
@@ -484,19 +508,21 @@ class App {
 
         parent.querySelectorAll('.btn-grammar-opt').forEach(b => b.classList.add('disabled'));
 
+        const explanation = btn.dataset.explanation ? `<br><small>${btn.dataset.explanation}</small>` : '';
+
         fb.style.display = 'block';
         if (selected === correct) {
           btn.classList.add('correct');
           audioController.playChime('success');
           this.addXP(15, 'Grammatica oefening juist');
           fb.className = 'ex-feedback-box success-feedback';
-          fb.innerHTML = `✅ <strong>Uitstekend!</strong> Juiste vorm: <em>${correct}</em> (+15 XP)`;
+          fb.innerHTML = `✅ <strong>Uitstekend!</strong> Juiste vorm: <em>${correct}</em> (+15 XP)${explanation}`;
         } else {
           btn.classList.add('incorrect');
           audioController.playChime('error');
           this.addXP(5, 'Grammatica geprobeerd');
           fb.className = 'ex-feedback-box error-feedback';
-          fb.innerHTML = `❌ <strong>Niet helemaal:</strong> Het juiste antwoord is <em>${correct}</em>.`;
+          fb.innerHTML = `❌ <strong>Niet helemaal:</strong> Het juiste antwoord is <em>${correct}</em>.${explanation}`;
         }
       };
     });
