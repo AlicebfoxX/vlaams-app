@@ -541,5 +541,213 @@ export const STORIES_DATA = [
         explanation: "'Het noorden kwijt zijn' betekent de weg of het morele overzicht kwijt zijn."
       }
     ]
+  },
+
+  // =========================================================================
+  // STORY 5: CHAPLA — DE REIGER VAN HET MOERAS (Special for Timur! 🦢)
+  // =========================================================================
+  {
+    id: "story-chapla",
+    title: "Chapla — De Reiger van het Moeras",
+    subtitle: "Een dramatisch avontuur van een dappere vogel die een bijzondere vriend vond",
+    category: "kids",
+    categoryLabel: "🦢 Speciaal voor Timur",
+    badge: "Kinderboek",
+    readingTime: "8 min",
+    themeColor: "#0ea5e9",
+    accentColor: "#38bdf8",
+    icon: "🦢",
+    heroImage: "swamp_heron",
+    synopsis: "Chapla is een trotse blauwe reiger die alleen leeft in het grote moeras vol mist en geheimen. Ze heeft altijd alleen gevlogen — totdat een stout, grappig jongetje genaamd Timur haar leven voorgoed verandert. Een verhaal vol gevaar, vriendschap en moed.",
+    characters: [
+      {
+        id: "chapla",
+        name: "Chapla",
+        role: "De Blauwe Reiger — Koningin van het Moeras",
+        avatar: "🦢",
+        voicePitch: 1.2,
+        description: "Chapla is een lange, sierlijke blauwe reiger met grijze vleugels en een gouden snavel. Ze is trots, slim en een beetje eenzaam — maar diep vanbinnen heeft ze een groot hart."
+      },
+      {
+        id: "timur",
+        name: "Timur",
+        role: "Een dappere jongen van 12 jaar",
+        avatar: "👦",
+        voicePitch: 1.1,
+        description: "Timur is een stoere maar lieve jongen die dol is op avontuur. Hij is niet bang voor modder, kikkers of geheimzinnige geluiden in de nacht. Hij spreekt al een beetje Vlaams en leert elke dag bij!"
+      },
+      {
+        id: "oude-kikker",
+        name: "Kwaks",
+        role: "De Wijze Kikker van het Moeras",
+        avatar: "🐸",
+        voicePitch: 0.75,
+        description: "Kwaks is al honderd jaar oud — of zo lijkt het toch. Hij weet alles over het moeras en geeft altijd raad... maar soms is die raad een beetje raar."
+      }
+    ],
+    chapters: [
+      {
+        chapterNumber: 1,
+        title: "De Eenzame Koningin",
+        location: "Het Grote Moeras, vroege ochtend",
+        narrative: "In het hart van het grote Vlaamse moeras, waar de mist over het water zweeft als een geheimzinnige deken, staat Chapla roerloos op één poot. Ze wacht. Dat doet ze elke ochtend. Wachten op een vis, wachten op de zon, wachten op... ze weet zelf niet wat. De andere reigers zijn allang weggevlogen naar het zuiden. Maar Chapla bleef. Dit moeras is van haar. Elke riet, elke kikker, elke druppel bruin water — van háár. Dan hoort ze opeens een plons. Een grote plons. Geen vis. Iets veel groters.",
+        dialogues: [
+          {
+            speaker: "chapla",
+            text: "Wie durft er in MIJN moeras te plonzen?! Dit is privé terrein! Gij hoort hier niet thuis!",
+            audioText: "Wie durft er in MIJN moeras te plonzen?! Dit is privé terrein! Gij hoort hier niet thuis!",
+            highlightWords: ["Wie", "durft", "privé", "Gij", "hoort"],
+            contextNote: "'Gij' is het typisch Vlaamse woord voor 'jij'. Chapla is heel boos en spreekt heel formeel!"
+          },
+          {
+            speaker: "timur",
+            text: "Au! Help! Ik ben in de modder gezakt! Ik kan er niet uitgeraken! Alstublieft, help mij, grote vogel!",
+            audioText: "Au! Help! Ik ben in de modder gezakt! Ik kan er niet uitgeraken! Alstublieft, help mij, grote vogel!",
+            highlightWords: ["modder", "gezakt", "uitgeraken", "Alstublieft"],
+            contextNote: "'Uitgeraken' is Vlaams voor 'eruit komen'. 'Alstublieft' betekent 'please'."
+          },
+          {
+            speaker: "chapla",
+            text: "... Hmm. Gij zijt een dwaas kind. Maar ik laat u toch niet verzinken. Pak mijn vleugel vast — maar trek er NIET aan!",
+            audioText: "Hmm. Gij zijt een dwaas kind. Maar ik laat u toch niet verzinken. Pak mijn vleugel vast — maar trek er NIET aan!",
+            highlightWords: ["dwaas", "verzinken", "vleugel", "Pak"],
+            contextNote: "'Verzinken' betekent 'zinken / verdwijnen in de modder'. 'Dwaas' betekent 'foolish'."
+          }
+        ],
+        dilemma: {
+          question: "Chapla redt Timur uit de modder. Maar wat doet ze daarna?",
+          options: [
+            { text: "Ze stuurt hem weg: 'Mijn moeras is gevaarlijk voor kinderen!'", outcome: "Timur gaat weg... maar komt de volgende dag terug met een idee.", consequence: "chapla_warns" },
+            { text: "Ze laat hem blijven: 'Ge kunt één nacht in het riet slapen.'", outcome: "Timur en Chapla beginnen voorzichtig te praten. Een vriendschap begint!", consequence: "chapla_befriends" }
+          ]
+        },
+        vocabFocus: ["moeras", "reiger", "mist", "vleugel", "modder", "verzinken", "dwaas"]
+      },
+      {
+        chapterNumber: 2,
+        title: "Het Gevaar in de Nacht",
+        location: "Het Moeras, middernacht",
+        narrative: "Die nacht verandert alles. Timur heeft een kamp gemaakt van riet en takjes — niet zo comfortabel, maar hij is trots op zichzelf. Chapla staat op wacht aan de oever. Dan klinkt er een motor in de verte. Lichten schijnen over het water. Stroperaars! Mannen die illegaal vogels vangen voor geld. Chapla weet wat ze komen doen. Ze is al eerder gevlucht voor zulke mannen. Maar vannacht... kan ze niet alleen vluchten. Want Timur slaapt nog.",
+        dialogues: [
+          {
+            speaker: "oude-kikker",
+            text: "Psst! Chapla! Kwak! Pas op! De mannen met netten zijn terug! Ze zoeken jou! Vlucht! Kwak kwak!",
+            audioText: "Psst! Chapla! Pas op! De mannen met netten zijn terug! Ze zoeken jou! Vlucht!",
+            highlightWords: ["Pas op", "netten", "terug", "Vlucht"],
+            contextNote: "'Pas op' betekent 'be careful / watch out'. 'Netten' zijn nets."
+          },
+          {
+            speaker: "chapla",
+            text: "Ik kan niet vluchten, Kwaks. Het kind slaapt nog. Ik... ik ga hem wakker maken. Wij vluchten samen.",
+            audioText: "Ik kan niet vluchten, Kwaks. Het kind slaapt nog. Ik ga hem wakker maken. Wij vluchten samen.",
+            highlightWords: ["vluchten", "wakker", "samen"],
+            contextNote: "Dit is een groot moment! Chapla kiest voor Timur. 'Wakker maken' betekent 'to wake up'."
+          },
+          {
+            speaker: "timur",
+            text: "Chapla?! Wat is er? Waarom schreeuwen die mannen? Oh nee... Stroperaars! Ik heb dit op tv gezien! Kom, ik weet wat we moeten doen!",
+            audioText: "Chapla?! Wat is er? Waarom schreeuwen die mannen? Oh nee... Stroperaars! Ik weet wat we moeten doen!",
+            highlightWords: ["Waarom", "schreeuwen", "Stroperaars", "moeten"],
+            contextNote: "'Stroperaars' zijn poachers — mensen die illegaal dieren vangen. 'Schreeuwen' betekent 'to shout'."
+          }
+        ],
+        dilemma: {
+          question: "Timur heeft een plan! Maar welk plan kiest hij?",
+          options: [
+            { text: "Lawaai maken om de stroperaars te verwarren en te laten vluchten!", outcome: "Timur gooit stenen in het water en schreeuwt. De mannen denken dat er iemand aankomt en vluchten!", consequence: "plan_noise" },
+            { text: "Chapla's noodkreet leren — de schreeuw die alle vogels waarschuwt!", outcome: "Timur imiteert Chapla's kreet zo goed dat alle vogels opstijgen — het klinkt als een alarm!", consequence: "plan_birdcall" }
+          ]
+        },
+        vocabFocus: ["gevaar", "nacht", "vluchten", "stroperaars", "wakker", "samen", "netten", "schreeuwen"]
+      },
+      {
+        chapterNumber: 3,
+        title: "De Vlucht door de Mist",
+        location: "Het Moeras, voor de dageraad",
+        narrative: "Timur's plan werkt — bijna. De stroperaars vluchten weg, maar één man met een groot net blijft achter. Hij heeft Chapla gezien en hij wil haar. Chapla vliegt laag boven het water. Ze kan ontsnappen. Ze is snel. Maar dan ziet ze hoe Timur struikelt over een wortel en valt in het koude moeraswater. De man draait zich om. Hij loopt nu op Timur af. Chapla's hart bonkt. Wat nu?",
+        dialogues: [
+          {
+            speaker: "chapla",
+            text: "NEE! Blijf van hem af! Hij is MIJN vriend!",
+            audioText: "NEE! Blijf van hem af! Hij is MIJN vriend!",
+            highlightWords: ["Blijf", "vriend"],
+            contextNote: "Chapla roept voor het eerst dat Timur haar VRIEND is. Een groot moment! 'Blijf van hem af' = 'Leave him alone'."
+          },
+          {
+            speaker: "timur",
+            text: "Chapla, vlucht! Maak je geen zorgen om mij! Jij bent een vrije vogel! Vliegt gij alstublieft weg!",
+            audioText: "Chapla, vlucht! Maak je geen zorgen om mij! Jij bent een vrije vogel! Vliegt gij alstublieft weg!",
+            highlightWords: ["vlucht", "vrije", "vogel", "Vliegt"],
+            contextNote: "Timur zegt 'vliegt gij' — Vlaams voor 'vlieg jij'. 'Vrij' betekent 'free'."
+          },
+          {
+            speaker: "oude-kikker",
+            text: "KWAK! Wacht! Ik heb een idee! Kwak! Luister naar mij, allebei! Kwak kwak kwak!",
+            audioText: "KWAK! Wacht! Ik heb een idee! Luister naar mij, allebei!",
+            highlightWords: ["Wacht", "idee", "Luister", "allebei"],
+            contextNote: "'Allebei' betekent 'both of you'. 'Wacht' betekent 'wait'."
+          }
+        ],
+        dilemma: null,
+        vocabFocus: ["vlucht", "vrij", "vogel", "vriend", "gevaar", "mist", "dageraad", "bonken"]
+      },
+      {
+        chapterNumber: 4,
+        title: "De Blauwe Vleugels van Vriendschap",
+        location: "Het Moeras, zonsopgang — Het Gelukkige Einde",
+        narrative: "Kwaks de kikker leidt de stroper naar een diepe modderval — de beroemde Kwakkenbult — en de man zakt er tot zijn knieën in. Hij kan niet meer bewegen. Timur klimt veilig op de oever. Chapla landt naast hem, haar grote blauwe vleugels uitgespreid. De zon komt op over het moeras. Het water glinstert als goud. Ze staan samen — een jongen van twaalf en een trotse reiger — en kijken naar het schitterende licht. Chapla buigt haar lange hals naar Timur. Het is een reigerbegroeting. De mooiste die er bestaat.",
+        dialogues: [
+          {
+            speaker: "chapla",
+            text: "Timur... In al mijn jaren in dit moeras heb ik nooit een vriend gehad. Tot vandaag. Gij zijt nu één van ons. Van het moeras.",
+            audioText: "Timur... In al mijn jaren in dit moeras heb ik nooit een vriend gehad. Tot vandaag. Gij zijt nu één van ons. Van het moeras.",
+            highlightWords: ["jaren", "vriend", "Tot", "vandaag", "één"],
+            contextNote: "'Tot vandaag' betekent 'until today'. Dit is de mooiste zin van het hele verhaal!"
+          },
+          {
+            speaker: "timur",
+            text: "Bedankt, Chapla. Ik kom terug, elke zomer. Ik beloof het. En ik leer nog veel meer Vlaams — dan kunnen wij echt goed praten!",
+            audioText: "Bedankt, Chapla. Ik kom terug, elke zomer. Ik beloof het. En ik leer nog veel meer Vlaams!",
+            highlightWords: ["Bedankt", "terug", "zomer", "beloof", "leer"],
+            contextNote: "'Ik beloof het' = 'I promise it'. 'Elke zomer' = 'every summer'. Timur houdt zijn belofte!"
+          },
+          {
+            speaker: "oude-kikker",
+            text: "Kwak. Vriendschap is het enige wat het moeras warmer maakt dan de zon. Kwak. Kom terug, Timur. Kwak kwak.",
+            audioText: "Vriendschap is het enige wat het moeras warmer maakt dan de zon. Kom terug, Timur.",
+            highlightWords: ["Vriendschap", "enige", "warmer", "zon"],
+            contextNote: "'Vriendschap' = friendship. 'Het enige' = 'the only thing'. Kwaks is toch wijs!"
+          }
+        ],
+        dilemma: null,
+        vocabFocus: ["vriendschap", "belofte", "zonsopgang", "vleugels", "glinsteren", "begroeting", "trots"]
+      }
+    ],
+    quiz: [
+      {
+        question: "Wat is het Vlaamse woord voor 'be careful / watch out'?",
+        options: ["Kijk uit", "Pas op", "Wees voorzichtig"],
+        correctIndex: 1,
+        explanation: "'Pas op!' is de klassieke Vlaamse waarschuwing die je overal hoort. Super handig!"
+      },
+      {
+        question: "Chapla zegt: 'Gij zijt nu één van ons.' Wat betekent 'gij zijt'?",
+        options: ["Jij bent", "Jij was", "Jij zult zijn"],
+        correctIndex: 0,
+        explanation: "'Gij zijt' is typisch Vlaams voor 'jij bent'. In tussentaal zegt men ook 'ge zijt' of gewoon 'ge bent'."
+      },
+      {
+        question: "Timur zegt: 'Ik beloof het.' Wat betekent 'beloven'?",
+        options: ["to forget", "to promise", "to believe"],
+        correctIndex: 1,
+        explanation: "'Beloven' betekent 'to promise'. 'Ik beloof het' = 'I promise it'. Timur houdt altijd zijn belofte!"
+      },
+      {
+        question: "Wat is een 'reiger' in het Engels?",
+        options: ["an eagle", "a heron", "a stork"],
+        correctIndex: 1,
+        explanation: "Een reiger is een heron — een lange, elegante vogel die in moerassen woont. Precies zoals Chapla!"
+      }
+    ]
   }
 ];
