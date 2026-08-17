@@ -2007,3 +2007,238 @@ button {
   border-top: 1px solid var(--border-subtle);
   padding-top: 1rem;
 }
+
+/* ============================================
+   GRAMMAR LAB — LEVEL ACCORDION (1.1 → 2.3)
+   ============================================ */
+
+.level-track {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.level-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.level-chip:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  transform: translateY(-1px);
+}
+
+.levels-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.level-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.level-block[open] {
+  border-color: var(--accent-amber);
+}
+
+.level-summary {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1.35rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.18s ease;
+}
+
+.level-summary::-webkit-details-marker { display: none; }
+.level-summary:hover { background: var(--bg-card-hover); }
+
+.level-icon { font-size: 1.6rem; }
+
+.level-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.level-label {
+  font-family: var(--font-display, inherit);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.level-cefr {
+  font-size: 0.78rem;
+  color: var(--accent-amber);
+  font-weight: 600;
+}
+
+.level-summary-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.level-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.level-body {
+  padding: 0 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* --- Topic accordion inside a level --- */
+
+.topic-block {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.topic-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.topic-summary::-webkit-details-marker { display: none; }
+.topic-summary:hover .topic-name { color: var(--accent-amber); }
+
+.topic-name {
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  transition: color 0.18s ease;
+}
+
+.topic-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.topic-chevron {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.topic-block[open] .topic-chevron { transform: rotate(90deg); }
+
+.topic-body {
+  padding: 0 1.1rem 1.1rem;
+}
+
+.topic-intro {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.topic-intro-en {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* --- Rule rows --- */
+
+.rule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.rule-row {
+  background: var(--bg-card);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+}
+
+.rule-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.rule-name {
+  font-weight: 700;
+  color: var(--accent-amber);
+  font-size: 0.95rem;
+}
+
+.rule-en {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.rule-detail {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.rule-examples {
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.7rem;
+}
+
+.grammar-exercise-box h4 {
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.btn-grammar-opt.is-correct-answer {
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+}
+
+@media (max-width: 720px) {
+  .level-summary {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "icon meta" "text text";
+    row-gap: 0.5rem;
+  }
+  .level-icon { grid-area: icon; }
+  .level-meta { grid-area: meta; }
+  .level-summary-text { grid-area: text; }
+  .level-count { display: none; }
+  .topic-summary { flex-direction: column; gap: 0.2rem; }
+}
