@@ -399,7 +399,7 @@ class App {
     container.innerHTML = `
       <div class="grammar-header">
         <h1 class="view-title">🧩 Grammatica Lab</h1>
-        <p class="view-subtitle">Ontdek hoe Vlamingen echt spreken: modern <em>je/jij</em> zoals overal, plus de échte Vlaamse kenmerken — <em>-ke</em> verkleinwoorden en de mannelijke N-regel.</p>
+        <p class="view-subtitle">Ontdek hoe Vlamingen echt spreken: modern <em>je/jij</em> zoals overal, plus dé échte Vlaamse kenmerken zoals de <em>-ke</em> verkleinwoorden.</p>
       </div>
 
       <!-- SECTION 1: PRONOUNS — MODERN JE/JIJ -->
@@ -410,29 +410,6 @@ class App {
             <h2 class="grammar-title">${g.pronomenVerschillen.title}</h2>
             <p class="grammar-desc">${md(g.pronomenVerschillen.description)}</p>
           </div>
-        </div>
-
-        <div class="grammar-table-wrap">
-          <table class="grammar-table">
-            <thead>
-              <tr>
-                <th>Nederland</th>
-                <th>Vlaanderen</th>
-                <th>Voorbeeldzin</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              ${g.pronomenVerschillen.comparisonTable.map(row => `
-                <tr>
-                  <td><strong>${row.hollands}</strong></td>
-                  <td class="cell-vlaams">${row.vlaams}</td>
-                  <td><em>${row.example}</em></td>
-                  <td>${row.note}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
         </div>
 
         <div class="nrule-list">
@@ -472,29 +449,6 @@ class App {
         </div>
 
         ${renderExercises(g.diminutives.exercises, "Oefen de Verkleinwoorden")}
-      </div>
-
-      <!-- SECTION 3: MASCULINE N-RULE -->
-      <div class="grammar-card">
-        <div class="grammar-card-header">
-          <span class="grammar-icon">🌳</span>
-          <div>
-            <h2 class="grammar-title">${g.articlesNRule.title}</h2>
-            <p class="grammar-desc">${md(g.articlesNRule.description)}</p>
-          </div>
-        </div>
-
-        <div class="nrule-list">
-          ${g.articlesNRule.rules.map(r => `
-            <div class="nrule-row">
-              <div class="nrule-title">${r.rule}</div>
-              <div class="nrule-example">${md(r.example)}</div>
-              <div class="nrule-std">Standaard: ${r.standard}</div>
-            </div>
-          `).join('')}
-        </div>
-
-        ${renderExercises(g.articlesNRule.exercises, "Oefen de N-Regel")}
       </div>
     `;
 
