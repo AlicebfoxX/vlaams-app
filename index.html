@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klapke — Leer Écht Vlaams met Verhalen & Dialogen</title>
+  <meta name="description" content="Verbeter je Vlaams (Belgisch-Nederlands) met meeslepende verhalen over toerisme, biercultuur, carrière en AI. Klik op woorden voor directe vertalingen, luister naar dialogen en oefen je tussentaal.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- HEADER & GLOBAL NAVBAR -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-brand-group">
+        <a href="#dashboard" class="brand-logo" id="logo-link">
+          <span class="logo-icon">🦁</span>
+          <div class="brand-text">
+            <span class="brand-title">Klapke</span>
+            <span class="brand-sub">Vlaamse Leermeester</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- MAIN NAVIGATION LINKS -->
+      <nav class="main-nav" aria-label="Hoofdnavigatie">
+        <a href="#dashboard" class="nav-link active" data-view="dashboard">
+          <span class="nav-icon">🏠</span> Overzicht
+        </a>
+        <a href="#stories" class="nav-link" data-view="stories">
+          <span class="nav-icon">📖</span> Verhalen & Helden
+        </a>
+        <a href="#vault" class="nav-link" data-view="vault">
+          <span class="nav-icon">📚</span> Woordenschat Vault
+        </a>
+        <a href="#grammar" class="nav-link" data-view="grammar">
+          <span class="nav-icon">🧩</span> Tussentaal Lab
+        </a>
+        <a href="#quiz" class="nav-link" data-view="quiz">
+          <span class="nav-icon">🎯</span> Quiz Arena
+        </a>
+      </nav>
+
+      <!-- USER STATS & CONTROLS -->
+      <div class="header-actions">
+        <div class="user-stat-badge" title="Jouw huidige niveau">
+          <span id="user-rank-badge">🧳 De Toerist</span>
+        </div>
+
+        <div class="user-xp-pill" title="Totaal verdiende ervaringspunten">
+          <span class="xp-bolt">⚡</span>
+          <span id="user-xp-count">0 XP</span>
+        </div>
+
+        <div class="user-streak-pill" title="Dagelijkse leerdagen op rij">
+          <span class="streak-flame">🔥</span>
+          <span id="user-streak-count">1 dag</span>
+        </div>
+
+        <button class="btn-icon" id="btn-audio-toggle" title="Geluid in-/uitschakelen">
+          🔊 Geluid Aan
+        </button>
+
+        <button class="btn-icon" id="btn-theme-toggle" title="Wissel tussen donker en licht thema">
+          ☀️ Licht
+        </button>
+
+        <button class="btn-icon" id="btn-lock-app" title="Vergrendel applicatie">
+          🔒 Vergrendel
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="app-container">
+    <!-- DASHBOARD VIEW -->
+    <section id="dashboard-view" class="view-panel active"></section>
+
+    <!-- STORIES HUB VIEW -->
+    <section id="stories-view" class="view-panel" style="display: none;"></section>
+
+    <!-- STORY READER VIEW -->
+    <section id="story-reader-view" class="view-panel" style="display: none;"></section>
+
+    <!-- VOCABULARY VAULT VIEW -->
+    <section id="vault-view" class="view-panel" style="display: none;"></section>
+
+    <!-- GRAMMAR & TUSSENTAAL LAB VIEW -->
+    <section id="grammar-view" class="view-panel" style="display: none;"></section>
+
+    <!-- QUIZ VIEW -->
+    <section id="quiz-view" class="view-panel" style="display: none;"></section>
+  </div>
+
+  <!-- INTERACTIVE WORD POPOVER MODAL (CLICK-TO-TRANSLATE) -->
+  <div id="word-popover-modal" class="popover-modal" style="display: none;" role="dialog" aria-modal="true"></div>
+
+  <!-- JAVASCRIPT MODULES -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
