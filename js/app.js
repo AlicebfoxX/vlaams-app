@@ -399,7 +399,7 @@ class App {
     container.innerHTML = `
       <div class="grammar-header">
         <h1 class="view-title">🧩 Grammatica Lab</h1>
-        <p class="view-subtitle">Ontdek hoe Vlamingen echt spreken: modern <em>je/jij</em> zoals overal, plus dé échte Vlaamse kenmerken zoals de <em>-ke</em> verkleinwoorden.</p>
+        <p class="view-subtitle">Ontdek waar het Vlaams écht van het Nederlands verschilt: niet in de voornaamwoorden, maar in woordenschat, uitroepen en uitdrukkingen.</p>
       </div>
 
       <!-- SECTION 1: PRONOUNS — MODERN JE/JIJ -->
@@ -425,30 +425,6 @@ class App {
         </div>
 
         ${renderExercises(g.pronomenVerschillen.exercises, "Oefen: Modern Belgisch Nederlands")}
-      </div>
-
-      <!-- SECTION 2: DIMINUTIVES (-KE) -->
-      <div class="grammar-card">
-        <div class="grammar-card-header">
-          <span class="grammar-icon">🍪</span>
-          <div>
-            <h2 class="grammar-title">${g.diminutives.title}</h2>
-            <p class="grammar-desc">${md(g.diminutives.description)}</p>
-          </div>
-        </div>
-
-        <div class="diminutives-grid">
-          ${g.diminutives.examples.map(ex => `
-            <div class="dim-chip">
-              <span class="dim-base">${ex.base}</span>
-              <span class="dim-arrow">➔</span>
-              <strong class="dim-vlaams">${ex.vlaams}</strong>
-              <span class="dim-nl">(${ex.standardNL})</span>
-            </div>
-          `).join('')}
-        </div>
-
-        ${renderExercises(g.diminutives.exercises, "Oefen de Verkleinwoorden")}
       </div>
     `;
 
