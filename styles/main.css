@@ -2242,3 +2242,372 @@ button {
   .level-count { display: none; }
   .topic-summary { flex-direction: column; gap: 0.2rem; }
 }
+
+/* ============================================
+   MOBILE — phones (≤ 640px)
+   Bottom tab navigation + single-column layouts
+   ============================================ */
+
+@media (max-width: 640px) {
+
+  /* --- Never allow sideways scrolling --- */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .app-container {
+    padding: 1rem 0.9rem calc(5.5rem + env(safe-area-inset-bottom));
+  }
+
+  /* --- Header: one compact row ---
+     backdrop-filter on an ancestor makes it the containing block for
+     position:fixed children, which would trap the bottom tab bar inside
+     the header, so it is swapped for a solid background on phones. */
+  .app-header {
+    padding: 0.6rem 0.9rem;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg-secondary);
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .header-brand-group { min-width: 0; flex-shrink: 1; }
+
+  .brand-logo { gap: 0.5rem; }
+  .logo-icon { font-size: 1.6rem; }
+  .brand-title { font-size: 1.15rem; }
+  .brand-sub { display: none; }
+
+  /* Stats: keep XP + streak, drop the long rank label */
+  .header-actions {
+    gap: 0.35rem;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .user-stat-badge { display: none; }
+
+  .user-xp-pill,
+  .user-streak-pill {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  /* Icon-only controls */
+  #btn-audio-toggle,
+  #btn-theme-toggle {
+    display: none;
+  }
+
+  #btn-lock-app {
+    font-size: 0;
+    padding: 0.45rem 0.55rem;
+    line-height: 1;
+  }
+
+  #btn-lock-app::before {
+    content: "🔒";
+    font-size: 1.05rem;
+  }
+
+  /* --- Navigation becomes a bottom tab bar --- */
+  .main-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    overflow: visible;
+    padding: 0.35rem 0.25rem calc(0.35rem + env(safe-area-inset-bottom));
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-link {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 0.4rem 0.15rem;
+    border-radius: var(--radius-md);
+    font-size: 0.62rem;
+    line-height: 1.15;
+    text-align: center;
+    min-height: 48px;
+    background: transparent;
+    color: var(--text-muted);
+    overflow: hidden;
+  }
+
+  /* Short labels so five tabs fit a phone: hide the desktop text and
+     print a compact label instead. */
+  .nav-link { font-size: 0; }
+  .nav-link .nav-icon { font-size: 1.3rem; }
+
+  .nav-link::after {
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-link[data-view="dashboard"]::after { content: "Start"; }
+  .nav-link[data-view="stories"]::after   { content: "Verhalen"; }
+  .nav-link[data-view="vault"]::after     { content: "Woorden"; }
+  .nav-link[data-view="grammar"]::after   { content: "Grammatica"; }
+  .nav-link[data-view="quiz"]::after      { content: "Quiz"; }
+
+  .nav-link.active {
+    background: transparent;
+    color: var(--accent-amber);
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* --- Typography scales down --- */
+  .view-title { font-size: 1.5rem; }
+  .view-subtitle { font-size: 0.92rem; }
+  .dash-hero-title { font-size: 2rem; }
+  .dash-hero-subtitle { font-size: 0.95rem; }
+  .section-title { font-size: 1.25rem; }
+
+  /* --- Cards: single column, tighter padding --- */
+  .dash-welcome-card,
+  .stories-grid,
+  .stories-grid-large,
+  .vocab-cards-grid,
+  .quiz-modes-grid,
+  .diminutives-grid,
+  .cast-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .dash-welcome-card,
+  .daily-word-card,
+  .story-card,
+  .story-card-detailed,
+  .grammar-card,
+  .reader-content-card,
+  .quiz-question-box,
+  .vocab-card {
+    padding: 1.1rem;
+  }
+
+  .story-card-detailed { grid-template-columns: 1fr; }
+  .story-detailed-icon { font-size: 2rem; padding: 0.75rem; }
+
+  .dash-hero-actions { flex-direction: column; }
+  .dash-hero-actions .btn { width: 100%; }
+
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  /* --- Buttons: comfortable tap targets --- */
+  .btn {
+    min-height: 44px;
+    font-size: 0.92rem;
+  }
+
+  .btn-sm { min-height: 40px; }
+
+  .btn-icon { min-height: 40px; }
+
+  /* --- Story reader --- */
+  .reader-title { font-size: 1.5rem; }
+  .reader-narrative { font-size: 1rem; line-height: 1.75; }
+  .reader-hero-icon { font-size: 2.5rem; }
+
+  .chapter-nav-pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.3rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chapter-pill { white-space: nowrap; }
+
+  .reader-footer-nav {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .reader-footer-nav .btn { width: 100%; }
+
+  .dialogue-bubble-row { gap: 0.5rem; }
+  .dialogue-bubble { max-width: 100%; }
+  .dialogue-avatar { font-size: 1.5rem; }
+
+  .dilemma-options { flex-direction: column; }
+  .dilemma-option-btn { width: 100%; text-align: left; }
+
+  /* --- Vault --- */
+  .vault-search-row,
+  .vault-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .vault-filter-bar {
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vault-tab-btn {
+    white-space: nowrap;
+    min-height: 40px;
+  }
+
+  .btn-bookmark-star,
+  .btn-speak-word,
+  .btn-audio-circle {
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-search { width: 100%; }
+
+  /* --- Flashcards --- */
+  .flashcard-modal-content { width: 100%; padding: 1rem; }
+  .flashcard-3d { max-width: 100%; }
+  .flashcard-term { font-size: 1.6rem; }
+  .flashcard-rating-buttons { flex-wrap: wrap; }
+  .flashcard-rating-buttons .btn { flex: 1 1 30%; }
+
+  /* --- Quiz --- */
+  .quiz-question-text { font-size: 1.1rem; }
+  .quiz-answer-btn { text-align: left; min-height: 48px; }
+  .result-actions { flex-direction: column; }
+  .result-actions .btn { width: 100%; }
+
+  /* --- Grammar lab --- */
+  .level-track {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .level-chip {
+    white-space: nowrap;
+    min-height: 40px;
+  }
+
+  .level-summary {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "icon meta" "text text";
+    gap: 0.6rem 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .level-body { padding: 0 0.75rem 0.9rem; }
+  .topic-body { padding: 0 0.85rem 0.9rem; }
+  .topic-summary { padding: 0.85rem 0.9rem; }
+  .topic-chevron { display: none; }
+
+  .rule-row { padding: 0.7rem 0.8rem; }
+  .rule-examples { font-size: 0.88rem; }
+
+  .grammar-exercise-box { padding: 0.9rem; }
+  .ex-options-row { flex-direction: column; }
+  .ex-options-row .btn { width: 100%; text-align: left; }
+
+  .grammar-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* --- Word popover: full-width sheet from the bottom --- */
+  .popover-card {
+    width: 100%;
+    max-width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 1.25rem;
+  }
+
+  .popover-modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  /* --- Security gate --- */
+  .security-gate-card { padding: 2rem 1.25rem; }
+  .security-title { font-size: 1.5rem; }
+
+  /* --- XP toast sits above the tab bar --- */
+  .xp-toast {
+    bottom: calc(5rem + env(safe-area-inset-bottom));
+    right: 0.9rem;
+    left: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+  .brand-title { font-size: 1rem; }
+  .user-xp-pill, .user-streak-pill { font-size: 0.72rem; padding: 0.25rem 0.45rem; }
+  .nav-link { font-size: 0.57rem; }
+  .dash-hero-title { font-size: 1.7rem; }
+}
+
+/* Tablets: two columns instead of three */
+@media (min-width: 641px) and (max-width: 900px) {
+  .stories-grid,
+  .vocab-cards-grid,
+  .quiz-modes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-actions { flex-wrap: wrap; justify-content: flex-end; }
+}
+
+/* ============================================
+   HERON MARK (logo, favicon, story icon)
+   ============================================ */
+
+img.logo-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.35));
+}
+
+.icon-heron {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.18em;
+}
+
+@media (max-width: 640px) {
+  img.logo-icon { width: 1.75rem; height: 1.75rem; }
+}
