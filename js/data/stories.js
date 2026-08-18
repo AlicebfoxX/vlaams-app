@@ -544,19 +544,19 @@ export const STORIES_DATA = [
   },
 
   // =========================================================================
-  // STORY 5: CHAPLA — DE REIGER VAN HET MOERAS (Special for Timur! 🦢)
+  // STORY 5: CHAPLA — DE REIGER VAN HET MOERAS (Special for Timur!)
   // =========================================================================
   {
     id: "story-chapla",
     title: "Chapla — De Reiger van het Moeras",
     subtitle: "Een dramatisch avontuur van een dappere vogel die een bijzondere vriend vond",
     category: "kids",
-    categoryLabel: "🦢 Speciaal voor Timur",
+    categoryLabel: "<img class=\"icon-heron\" src=\"assets/heron.svg\" alt=\"\"> Speciaal voor Timur",
     badge: "Kinderboek",
     readingTime: "8 min",
     themeColor: "#0ea5e9",
     accentColor: "#38bdf8",
-    icon: "🦢",
+    icon: "<img class=\"icon-heron\" src=\"assets/heron.svg\" alt=\"\">",
     heroImage: "swamp_heron",
     synopsis: "Chapla is een trotse blauwe reiger die alleen leeft in het grote moeras vol mist en geheimen. Ze heeft altijd alleen gevlogen — totdat een stout, grappig jongetje genaamd Timur haar leven voorgoed verandert. Een verhaal vol gevaar, vriendschap en moed.",
     characters: [
@@ -564,7 +564,7 @@ export const STORIES_DATA = [
         id: "chapla",
         name: "Chapla",
         role: "De Blauwe Reiger — Koningin van het Moeras",
-        avatar: "🦢",
+        avatar: "<img class=\"icon-heron\" src=\"assets/heron.svg\" alt=\"\">",
         voicePitch: 1.2,
         description: "Chapla is een lange, sierlijke blauwe reiger met grijze vleugels en een gouden snavel. Ze is trots, slim en een beetje eenzaam — maar diep vanbinnen heeft ze een groot hart."
       },
