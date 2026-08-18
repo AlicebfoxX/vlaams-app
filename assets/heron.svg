@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Steampunk heron">
+  <title>Chapla — de stoomreiger</title>
+  <defs>
+    <linearGradient id="hBrass" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="0.45" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#92400E"/>
+    </linearGradient>
+    <linearGradient id="hSteel" x1="0.2" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#CBD5E1"/>
+      <stop offset="0.45" stop-color="#8C99AC"/>
+      <stop offset="1" stop-color="#4A5568"/>
+    </linearGradient>
+    <linearGradient id="hWing" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#AEBACB"/>
+      <stop offset="0.55" stop-color="#6B7789"/>
+      <stop offset="1" stop-color="#3C4557"/>
+    </linearGradient>
+    <radialGradient id="hLens" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#FFFBEB"/>
+      <stop offset="0.4" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#7C2D12"/>
+    </radialGradient>
+    <linearGradient id="hSteam" x1="0" y1="1" x2="0.3" y2="0">
+      <stop offset="0" stop-color="#E2E8F0" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#E2E8F0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── steam ── -->
+  <g fill="url(#hSteam)">
+    <circle cx="34" cy="46" r="6"/>
+    <circle cx="27" cy="36" r="4.4"/>
+    <circle cx="22" cy="27" r="3"/>
+  </g>
+
+  <!-- ── legs: long, jointed, brass ── -->
+  <g stroke="#B45309" stroke-linecap="round" fill="none">
+    <path d="M58 88 L55 104 L52 120" stroke-width="4"/>
+    <path d="M66 88 L69 103 L73 120" stroke-width="4"/>
+  </g>
+  <g stroke="url(#hBrass)" stroke-linecap="round" fill="none">
+    <path d="M58 88 L55 104 L52 120" stroke-width="2.6"/>
+    <path d="M66 88 L69 103 L73 120" stroke-width="2.6"/>
+    <!-- toes -->
+    <path d="M52 120 l-9 3 M52 120 l4 4 M52 120 l9 2" stroke-width="2.4"/>
+    <path d="M73 120 l-9 2 M73 120 l3 4 M73 120 l9 3" stroke-width="2.4"/>
+  </g>
+  <!-- knee pistons -->
+  <circle cx="55" cy="104" r="3.4" fill="#FCD34D" stroke="#7C2D12" stroke-width="1.2"/>
+  <circle cx="69" cy="103" r="3.4" fill="#FCD34D" stroke="#7C2D12" stroke-width="1.2"/>
+
+  <!-- ── tail feathers ── -->
+  <path d="M36 74 q-16 4 -22 14 q12 -1 20 -4 z" fill="url(#hWing)" stroke="#2A3444" stroke-width="1.6" stroke-linejoin="round"/>
+
+  <!-- ── body: slim riveted hull ── -->
+  <path d="M38 74 q2 -16 18 -20 q18 -4 24 8 q5 12 -3 22 q-9 10 -22 8 q-15 -2 -17 -18 z"
+        fill="url(#hSteel)" stroke="#2A3444" stroke-width="2"/>
+  <g fill="#FCD34D" opacity="0.92">
+    <circle cx="45" cy="66" r="1.5"/>
+    <circle cx="44" cy="76" r="1.5"/>
+    <circle cx="49" cy="85" r="1.5"/>
+    <circle cx="76" cy="66" r="1.5"/>
+    <circle cx="78" cy="76" r="1.5"/>
+  </g>
+
+  <!-- ── boiler + gear on the shoulder ── -->
+  <g transform="translate(46 62)">
+    <g fill="url(#hBrass)" stroke="#7C2D12" stroke-width="1.1">
+      <rect x="-1.7" y="-13" width="3.4" height="4.4" rx="1"/>
+      <rect x="-1.7" y="8.6" width="3.4" height="4.4" rx="1"/>
+      <rect x="-13" y="-1.7" width="4.4" height="3.4" rx="1"/>
+      <rect x="8.6" y="-1.7" width="4.4" height="3.4" rx="1"/>
+      <g transform="rotate(45)">
+        <rect x="-1.7" y="-13" width="3.4" height="4.4" rx="1"/>
+        <rect x="-1.7" y="8.6" width="3.4" height="4.4" rx="1"/>
+        <rect x="-13" y="-1.7" width="4.4" height="3.4" rx="1"/>
+        <rect x="8.6" y="-1.7" width="4.4" height="3.4" rx="1"/>
+      </g>
+    </g>
+    <circle r="9.4" fill="url(#hBrass)" stroke="#7C2D12" stroke-width="1.8"/>
+    <circle r="3.8" fill="#1E2838" stroke="#7C2D12" stroke-width="1.4"/>
+  </g>
+  <!-- exhaust pipe feeding the steam -->
+  <path d="M42 56 q-6 -6 -8 -12" fill="none" stroke="#B45309" stroke-width="4.6" stroke-linecap="round"/>
+  <path d="M42 56 q-6 -6 -8 -12" fill="none" stroke="url(#hBrass)" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- ── folded wing ── -->
+  <path d="M46 70 q14 -8 28 0 q9 6 6 16 q-14 8 -26 1 q-10 -6 -8 -17 z" fill="url(#hWing)" stroke="#2A3444" stroke-width="1.8"/>
+  <g fill="none" stroke="#2A3444" stroke-width="1.2" opacity="0.7">
+    <path d="M50 74 q13 -3 21 6"/>
+    <path d="M49 80 q13 -2 20 7"/>
+    <path d="M51 86 q11 -1 17 6"/>
+  </g>
+
+  <!-- ── neck: long S-curve, segmented ── -->
+  <path d="M66 58 q10 -8 8 -20 q-2 -12 6 -18" fill="none" stroke="#2A3444" stroke-width="12" stroke-linecap="round"/>
+  <path d="M66 58 q10 -8 8 -20 q-2 -12 6 -18" fill="none" stroke="url(#hSteel)" stroke-width="9" stroke-linecap="round"/>
+  <g fill="none" stroke="#FCD34D" stroke-width="1.5" opacity="0.9">
+    <path d="M70 50 q4 -1 6 -3"/>
+    <path d="M73 41 q4 -1 5 -3"/>
+    <path d="M74 31 q4 -1 6 -3"/>
+    <path d="M77 23 q4 -1 6 -3"/>
+  </g>
+
+  <!-- ── head ── -->
+  <path d="M74 20 q0 -9 9 -10 q10 -1 12 8 q1 9 -8 11 q-11 1 -13 -9 z" fill="url(#hSteel)" stroke="#2A3444" stroke-width="1.9"/>
+
+  <!-- crest plumes trailing back -->
+  <g fill="url(#hBrass)" stroke="#7C2D12" stroke-width="1">
+    <path d="M78 11 q-10 -6 -19 -4 q9 2 14 8 z"/>
+    <path d="M79 14 q-11 -2 -18 3 q10 -1 16 3 z"/>
+  </g>
+
+  <!-- goggle over the eye -->
+  <g transform="translate(87 18)">
+    <circle r="7.4" fill="url(#hLens)" stroke="url(#hBrass)" stroke-width="2.8"/>
+    <circle r="7.4" fill="none" stroke="#7C2D12" stroke-width="0.9"/>
+    <path d="M-4 -3.4 q2.6 -2.6 6 -1.8" fill="none" stroke="#FFFBEB" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+    <path d="M-7.4 1.5 q-7 2 -11 -1.5" fill="none" stroke="url(#hBrass)" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── beak: long brass dagger ── -->
+  <path d="M94 15 L126 24 L94 25 z" fill="url(#hBrass)" stroke="#7C2D12" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M95 24.2 L124 24" fill="none" stroke="#7C2D12" stroke-width="0.9" opacity="0.8"/>
+</svg>
