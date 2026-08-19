@@ -2436,6 +2436,28 @@ button {
   .btn-icon { min-height: 40px; }
 
   /* --- Story reader --- */
+  .reader-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .reader-hero-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1.25rem 1rem;
+    min-width: 0;
+  }
+
+  .reader-hero-banner > * { min-width: 0; max-width: 100%; }
+
+  .reader-title,
+  .reader-subtitle {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
   .reader-title { font-size: 1.5rem; }
   .reader-narrative { font-size: 1rem; line-height: 1.75; }
   .reader-hero-icon { font-size: 2.5rem; }
