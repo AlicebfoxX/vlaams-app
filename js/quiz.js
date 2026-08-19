@@ -15,18 +15,32 @@ export class QuizArena {
 
   startStoryQuiz(story, chapterIndex = 0) {
     this.quizType = 'story';
-    this.currentQuestions = story.quiz || [
+
+    const chapter = (story.chapters || [])[chapterIndex];
+
+    // Each chapter has its own questions. Fall back to the story-wide quiz
+    // only if a chapter has none yet, so two chapters never show the same set.
+    const questions =
+      (chapter && Array.isArray(chapter.quiz) && chapter.quiz.length) ? chapter.quiz :
+      (Array.isArray(story.quiz) && story.quiz.length) ? story.quiz : null;
+
+    this.currentQuestions = questions || [
       {
-        question: `Wat is de kernboodschap van dit hoofdstuk in ${story.title}?`,
-        options: ["De personages lossen het mysterie op in authentiek Vlaams", "Ze reizen direct naar Nederland", "Ze gebruiken alleen formele taal"],
+        question: `Wat heb je net gelezen in "${chapter ? chapter.title : story.title}"?`,
+        options: ["Een scène met authentieke Vlaamse spreektaal", "Een formele nieuwsuitzending", "Een grammaticaoefening"],
         correctIndex: 0,
-        explanation: "In elk verhaal ontdek je echte Vlaamse omgangstaal en cultuur."
+        explanation: "Elk hoofdstuk laat je echte Vlaamse omgangstaal in context horen."
       }
     ];
+
     this.currentIndex = 0;
     this.score = 0;
     this.app.showView('quiz');
-    this.renderActiveQuiz(`Hoofdstukquiz: ${story.title}`);
+
+    const label = chapter
+      ? `📖 ${story.title} — H${chapterIndex + 1}: ${chapter.title}`
+      : `📖 ${story.title}`;
+    this.renderActiveQuiz(label);
   }
 
   startGeneralQuiz(type = 'hollands-vs-vlaams') {
