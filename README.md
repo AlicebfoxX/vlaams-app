@@ -3,7 +3,7 @@
 Een interactieve, verhaalgedreven webapplicatie om authentiek **Vlaams (Belgisch-Nederlands)** en tussentaal te leren en beheersen.
 
 ## 🌟 Belangrijkste Functies
-- 📖 **4 Dramatische Verhaallijnen met Helden & Keuzes**:
+- 📖 **Dramatische Verhaallijnen met Helden & Keuzes**:
   - *Het Mysterie van het Lam Gods* (Toerisme, Gent & Brugge)
   - *Het Laatste Brouwersgeheim* (Biercultuur & Trappistenspionage)
   - *De Glazen Plafonds van Brussel* (Werk, Carrière & Kantoorpolitiek)
