@@ -1722,5 +1722,841 @@ export const STORIES_DATA = [
         ]
       }
     ]
+  },
+
+  // =========================================================================
+  // STORY 7: DE SCHATKAART VAN HET MOERAS
+  // =========================================================================
+{
+    "id": "story-schat",
+    "title": "De Schatkaart van het Moeras",
+    "subtitle": "Een oude kaart, een gevaarlijke man, en een deur die van buitenaf dichtgaat.",
+    "category": "kids",
+    "categoryLabel": "<img class=\"icon-heron\" src=\"assets/heron.svg\" alt=\"\"> Chapla, deel 3",
+    "badge": "Kinderboek",
+    "readingTime": "14 min",
+    "themeColor": "#b45309",
+    "accentColor": "#fbbf24",
+    "icon": "🗺️",
+    "heroImage": "swamp_treasure",
+    "synopsis": "De storm heeft de oever opengescheurd, en in de blootgelegde klei ligt een loden koker met een kaart erin — driehonderd jaar oud. Timur is net terug voor de zomer, en samen met Chapla besluit hij de kaart te volgen. Maar zij zijn niet de enigen die haar willen. Victor Grijp zoekt die schat al twintig jaar, en hij deinst nergens voor terug. Diep onder een vervallen kasteel, achter een ijzeren deur die alleen van buitenaf opengaat, wacht het gevaarlijkste avontuur van het moeras.",
+    "characters": [
+      {
+        "id": "chapla",
+        "name": "Chapla",
+        "role": "De Blauwe Reiger — Koningin van het Moeras",
+        "avatar": "<img class=\"icon-heron\" src=\"assets/heron.svg\" alt=\"\">",
+        "voicePitch": 1.2,
+        "description": "Chapla vliegt hoog, ziet ver en denkt snel. Zij leest de kaart vanuit de lucht: wat voor Timur een sloot is, is voor haar een lijn in het landschap."
+      },
+      {
+        "id": "timur",
+        "name": "Timur",
+        "role": "De jongen die elke zomer terugkomt",
+        "avatar": "👦",
+        "voicePitch": 1.1,
+        "description": "Timur is een jaar ouder, spreekt al veel beter Vlaams, en heeft een zaklamp, een touw en veel te veel goesting in avontuur."
+      },
+      {
+        "id": "oude-kikker",
+        "name": "Kwaks",
+        "role": "De Wijze Kikker van het Moeras",
+        "avatar": "🐸",
+        "voicePitch": 0.75,
+        "description": "Kwaks kent elk verhaal dat ooit in het moeras verteld is — ook het verhaal van de schat. Hij dacht altijd dat het maar een sprookje was."
+      },
+      {
+        "id": "sterreke",
+        "name": "Sterreke",
+        "role": "Het Wezen van IJzer en Glas",
+        "avatar": "🤖",
+        "voicePitch": 0.6,
+        "description": "Sinds de grote storm hoort Sterreke bij het moeras. Zijn schouder is gelast, zijn lampjes branden weer fel — en hij kan in het donker zien."
+      },
+      {
+        "id": "bulle",
+        "name": "Bulle",
+        "role": "Het Everzwijn — sterkste rug van het moeras",
+        "avatar": "🐗",
+        "voicePitch": 0.5,
+        "description": "Bulle bromt nog altijd over alles, maar hij loopt nu wel meteen mee als er gegraven moet worden. Vrienden zijn vrienden, zegt hij."
+      },
+      {
+        "id": "pieke",
+        "name": "Pieke",
+        "role": "Het kleinste lieveheersbeestje van het moeras",
+        "avatar": "🐞",
+        "voicePitch": 1.6,
+        "description": "Pieke past door gaten waar niemand anders door past. In dit verhaal redt het kleinste dier van allemaal iedereen."
+      },
+      {
+        "id": "grijp",
+        "name": "Victor Grijp",
+        "role": "Schattenjager — zoekt al twintig jaar",
+        "avatar": "🕵️",
+        "voicePitch": 0.45,
+        "description": "Een magere man met een metaaldetector, een schop en een bestelwagen vol gereedschap. Hij glimlacht vriendelijk en meent er niets van. Voor Grijp is de schat van hém — en alles wat in de weg staat, is een probleem dat weggaat."
+      },
+      {
+        "id": "vera",
+        "name": "Vera",
+        "role": "De boswachter van de polder",
+        "avatar": "👩‍🌾",
+        "voicePitch": 1.15,
+        "description": "Vera rijdt elke dag met haar groene jeep langs de dijken. Zij kent elk nest, elke sloot en elke stroper — en zij gelooft kinderen die met een reiger komen aanzetten."
+      }
+    ],
+    "chapters": [
+      {
+        "chapterNumber": 1,
+        "title": "De Koker in de Klei",
+        "location": "Het Grote Moeras, de eerste dag van de zomervakantie",
+        "narrative": "De storm van vorig jaar heeft de oever opengescheurd als een boek. Waar vroeger riet stond, ligt nu kale, natte klei — en daarin ligt iets wat er niet hoort: een koker van lood, zwart van ouderdom, zo lang als Timurs onderarm. Timur is nog geen uur terug in het moeras of hij ligt al tot aan zijn ellebogen in de modder. Chapla kijkt toe met haar kop schuin. Als Timur het deksel eindelijk lospeutert, rolt er een strook perkament uit, stijf en geel. Er staan lijnen op. Een rivier. Een toren. Een kruisje. En één zin, in oud, krullerig handschrift: 'Wie het moeras bewaart, bewaart de schat.'",
+        "dialogues": [
+          {
+            "speaker": "timur",
+            "text": "Chapla! Chapla, kijk! Dit is een kaart! Een echte oude kaart! Amai, kijk dat kruisje eens staan!",
+            "audioText": "Chapla! Chapla, kijk! Dit is een kaart! Een echte oude kaart! Amai, kijk dat kruisje eens staan!",
+            "highlightWords": [
+              "kaart",
+              "oude",
+              "kruisje"
+            ],
+            "contextNote": "'Amai' = wow (het bekendste Vlaamse uitroepwoord). 'Een kruisje' = a little cross — op schatkaarten dé plek waar iets ligt."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Laat eens zien. Die kronkel daar, dat is onze vaart. En die toren... die toren ken ik. Dat is de ruïne van Hof ter Vloed, drie uur vliegen naar het westen.",
+            "audioText": "Laat eens zien. Die kronkel daar, dat is onze vaart. En die toren... die toren ken ik. Dat is de ruïne van Hof ter Vloed, drie uur vliegen naar het westen.",
+            "highlightWords": [
+              "kronkel",
+              "vaart",
+              "toren",
+              "ruïne"
+            ],
+            "contextNote": "'De vaart' is in Vlaanderen een kanaal. Een 'ruïne' is een vervallen gebouw. Chapla leest de kaart vanuit de lucht!"
+          },
+          {
+            "speaker": "oude-kikker",
+            "text": "Kwak! Ik ken dat verhaal! De schat van Hof ter Vloed! Mijn overgrootvader kwaakte er al over. Ik dacht dat het een sprookje was. Kwak kwak!",
+            "audioText": "Kwak! Ik ken dat verhaal! De schat van Hof ter Vloed! Mijn overgrootvader kwaakte er al over. Ik dacht dat het een sprookje was. Kwak kwak!",
+            "highlightWords": [
+              "verhaal",
+              "overgrootvader",
+              "sprookje"
+            ],
+            "contextNote": "'Een sprookje' = a fairy tale. Kwaks kent alle oude verhalen van het moeras."
+          },
+          {
+            "speaker": "timur",
+            "text": "Chapla, wij gaan die schat zoeken. Samen. Ik heb een touw, een zaklamp en mijn fiets. Zeg ja. Alsjeblieft, zeg ja!",
+            "audioText": "Chapla, wij gaan die schat zoeken. Samen. Ik heb een touw, een zaklamp en mijn fiets. Zeg ja. Alsjeblieft, zeg ja!",
+            "highlightWords": [
+              "zoeken",
+              "touw",
+              "zaklamp"
+            ],
+            "contextNote": "'Een touw' = a rope, 'een zaklamp' = a flashlight. Onthoud die twee — Timur heeft ze allebei nodig!"
+          }
+        ],
+        "dilemma": {
+          "prompt": "Kwaks vindt het veel te gevaarlijk en zaagt dat ze thuis moeten blijven. Hoe overtuigt Chapla hem om mee te gaan?",
+          "options": [
+            {
+              "id": "opt-1",
+              "text": "Kwaks, gij kent dat verhaal beter dan wij allemaal. Zonder u geraken wij daar nooit. Komt ge mee?",
+              "isCorrect": true,
+              "feedback": "Schoon gedaan! Chapla vraagt niet, ze geeft hem een rol die alleen hij kan spelen. Zo krijg je iemand mee.",
+              "xp": 25
+            },
+            {
+              "id": "opt-2",
+              "text": "Blijf dan maar thuis bij uw kikkerdril, oude zaag.",
+              "isCorrect": false,
+              "feedback": "Auw! 'Zagen' betekent zeuren, maar iemand een 'zaag' noemen is niet vriendelijk — en Kwaks' kennis blijkt later cruciaal.",
+              "xp": 5
+            },
+            {
+              "id": "opt-3",
+              "text": "Wij vertrekken zonder u, punt uit.",
+              "isCorrect": false,
+              "feedback": "Alleen op avontuur gaan is precies hoe je in een ijskelder eindigt zonder dat iemand het weet...",
+              "xp": 10
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Wat vindt Timur in de klei?",
+            "options": [
+              "Een loden koker met een oude kaart erin",
+              "Een gouden munt",
+              "Een fles met een brief"
+            ],
+            "correctIndex": 0,
+            "explanation": "De storm van het vorige verhaal heeft de oever opengescheurd en de koker blootgelegd."
+          },
+          {
+            "question": "Hoe herkent Chapla de plek op de kaart?",
+            "options": [
+              "Ze kent de toren van de ruïne uit de lucht",
+              "Ze ruikt het",
+              "Kwaks vertelt het haar"
+            ],
+            "correctIndex": 0,
+            "explanation": "Een reiger ziet het landschap van bovenaf — voor haar zijn de lijnen op de kaart gewone sloten en vaarten."
+          },
+          {
+            "question": "Wat is 'de vaart' in Vlaanderen?",
+            "options": [
+              "Een kanaal",
+              "De snelheid van een boot",
+              "Een brug"
+            ],
+            "correctIndex": 0,
+            "explanation": "In Vlaanderen noemt men een kanaal heel gewoon 'de vaart'."
+          },
+          {
+            "question": "Welke zin staat op de kaart?",
+            "options": [
+              "'Wie het moeras bewaart, bewaart de schat'",
+              "'Hier ligt goud'",
+              "'Kom nooit terug'"
+            ],
+            "correctIndex": 0,
+            "explanation": "Die zin lijkt eerst poëzie, maar aan het einde blijkt het een aanwijzing te zijn."
+          }
+        ]
+      },
+      {
+        "chapterNumber": 2,
+        "title": "De Man met de Metaaldetector",
+        "location": "De dijk langs de vaart, de volgende ochtend",
+        "narrative": "Ze zijn nog geen halfuur onderweg als ze hem zien: een magere man in een groene jas, die traag over de dijk loopt en een metaaldetector voor zich uit zwaait als een pendel. Naast hem staat een bestelwagen vol schoppen, emmers en zeven. Hij glimlacht als hij Timur ziet. Het is een vriendelijke glimlach, maar Chapla, die honderd winters van roofvogels overleefde, zet meteen haar veren op. Er is iets met die ogen. Die kijken niet naar Timur. Die kijken naar de koker onder Timurs arm.",
+        "dialogues": [
+          {
+            "speaker": "grijp",
+            "text": "Goeiemorgen, jongeman! Victor Grijp is de naam. Wat een schone koker hebt gij daar. Mag ik eens kijken? Ik ben nogal een liefhebber van oude dingen.",
+            "audioText": "Goeiemorgen, jongeman! Victor Grijp is de naam. Wat een schone koker hebt gij daar. Mag ik eens kijken? Ik ben nogal een liefhebber van oude dingen.",
+            "highlightWords": [
+              "Goeiemorgen",
+              "schone",
+              "kijken"
+            ],
+            "contextNote": "In Vlaanderen betekent 'schoon' mooi (niet 'proper'). Grijp klinkt vriendelijk — let op wat hij écht wil."
+          },
+          {
+            "speaker": "timur",
+            "text": "Eh... nee, meneer, dank u. Het is gewoon een oude buis die ik gevonden heb. Niks bijzonders, hoor.",
+            "audioText": "Eh... nee, meneer, dank u. Het is gewoon een oude buis die ik gevonden heb. Niks bijzonders, hoor.",
+            "highlightWords": [
+              "nee",
+              "gevonden",
+              "bijzonders"
+            ],
+            "contextNote": "'Niks bijzonders' = nothing special. Timur liegt niet graag, maar hij voelt dat er iets niet klopt."
+          },
+          {
+            "speaker": "grijp",
+            "text": "Hof ter Vloed. Dat staat erop, hè. Ik zoek die schat al twintig jaar, kereltje. Twintig jaar van mijn leven. En nu komt een snotneus met een reiger het zomaar oprapen?",
+            "audioText": "Hof ter Vloed. Dat staat erop, hè. Ik zoek die schat al twintig jaar, kereltje. Twintig jaar van mijn leven. En nu komt een snotneus met een reiger het zomaar oprapen?",
+            "highlightWords": [
+              "zoek",
+              "twintig",
+              "leven"
+            ],
+            "contextNote": "'Kereltje' en 'snotneus' klinken hier neerbuigend. Grijp laat zijn masker vallen."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Timur. Steek die kaart weg en stap achteruit. Traag. Niet lopen — traag.",
+            "audioText": "Timur. Steek die kaart weg en stap achteruit. Traag. Niet lopen — traag.",
+            "highlightWords": [
+              "Steek",
+              "weg",
+              "achteruit",
+              "Traag"
+            ],
+            "contextNote": "'Iets wegsteken' is Vlaams voor iets opbergen. 'Achteruit stappen' = to step back."
+          }
+        ],
+        "dilemma": {
+          "prompt": "Grijp zet een stap naar voren en steekt zijn hand uit naar de koker. Wat doet Timur?",
+          "options": [
+            {
+              "id": "opt-1",
+              "text": "Hij roept luid 'Boswachter Vera komt hier elk uur voorbij!' en stapt rustig naar zijn fiets.",
+              "isCorrect": true,
+              "feedback": "Slim! Timur vecht niet en rent niet — hij zorgt dat Grijp denkt dat er getuigen zijn. Precies wat je moet doen bij een vreemde die te dicht komt.",
+              "xp": 30
+            },
+            {
+              "id": "opt-2",
+              "text": "Hij duwt de man weg en begint te vechten om de koker.",
+              "isCorrect": false,
+              "feedback": "Nooit doen. Grijp is een volwassen man met een schop; Timur is twaalf. Slimheid is hier het enige wapen.",
+              "xp": 5
+            },
+            {
+              "id": "opt-3",
+              "text": "Hij geeft de kaart af en hoopt dat de man dan weggaat.",
+              "isCorrect": false,
+              "feedback": "Begrijpelijk als je bang bent — maar dan is de schat weg én het moeras onbeschermd. Er is een betere weg.",
+              "xp": 10
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Wie is Victor Grijp?",
+            "options": [
+              "Een schattenjager die de schat al twintig jaar zoekt",
+              "De nieuwe boswachter",
+              "Een vriend van Timurs vader"
+            ],
+            "correctIndex": 0,
+            "explanation": "Hij loopt met een metaaldetector over de dijk en heeft een bestelwagen vol graafgerief."
+          },
+          {
+            "question": "Grijp zegt: 'Wat een schone koker.' Wat betekent 'schoon' hier?",
+            "options": [
+              "Mooi",
+              "Proper, niet vuil",
+              "Duur"
+            ],
+            "correctIndex": 0,
+            "explanation": "In Vlaanderen betekent 'schoon' mooi. Voor 'niet vuil' zeggen ze 'proper'."
+          },
+          {
+            "question": "Wat waarschuwt Chapla aan Timur?",
+            "options": [
+              "De kaart wegsteken en traag achteruit stappen",
+              "Zo snel mogelijk wegrennen",
+              "De man alles vertellen"
+            ],
+            "correctIndex": 0,
+            "explanation": "Traag bewegen laat zien dat je niet in paniek bent — en geeft je tijd om na te denken."
+          },
+          {
+            "question": "Wat betekent 'iets wegsteken'?",
+            "options": [
+              "Iets opbergen, verstoppen",
+              "Iets doorprikken",
+              "Iets weggooien"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Wegsteken' is een heel gewoon Vlaams werkwoord voor opbergen."
+          }
+        ]
+      },
+      {
+        "chapterNumber": 3,
+        "title": "Drie Uur naar het Westen",
+        "location": "Over de polder, van de vaart tot de ruïne",
+        "narrative": "Ze reizen zoals alleen zij dat kunnen. Chapla vliegt vooruit en roept de bochten door. Timur trapt langs het jaagpad tot zijn benen branden. Bulle draaft door de weiden met Kwaks in een natte zakdoek op zijn rug, en Sterreke stapt er zwijgend achteraan, met Pieke op zijn schouder als een klein rood knoopje. Tegen de avond ligt de ruïne voor hen: drie muren, een halve toren, en klimop over alles heen. De kaart wijst niet naar de toren. De kaart wijst naar een lage heuvel ernaast, waar tussen de brandnetels een boog van bakstenen uit de grond komt. Een deur. Een ijzeren deur, roestig en zwaar, met een scharnier aan de buitenkant.",
+        "dialogues": [
+          {
+            "speaker": "oude-kikker",
+            "text": "Kwak! Dat is een ijskelder! Vroeger bewaarden ze daar ijs uit de vijver, de hele zomer lang. Koud, donker en peperduur was dat, kwak!",
+            "audioText": "Kwak! Dat is een ijskelder! Vroeger bewaarden ze daar ijs uit de vijver, de hele zomer lang. Koud, donker en peperduur was dat, kwak!",
+            "highlightWords": [
+              "ijskelder",
+              "bewaarden",
+              "donker"
+            ],
+            "contextNote": "Een 'ijskelder' is een echte oude uitvinding: een diepe kelder waar men winterijs bewaarde tot in de zomer."
+          },
+          {
+            "speaker": "timur",
+            "text": "En kijk hier eens! Er staat iets in de steen gekapt. 'Wie... het... moeras... bewaart.' Dezelfde zin als op de kaart!",
+            "audioText": "En kijk hier eens! Er staat iets in de steen gekapt. 'Wie... het... moeras... bewaart.' Dezelfde zin als op de kaart!",
+            "highlightWords": [
+              "steen",
+              "gekapt",
+              "Dezelfde"
+            ],
+            "contextNote": "'In steen kappen' = to carve into stone. De zin komt terug — dat is geen toeval."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Ik vertrouw dat niet, Timur. Die deur hangt scheef en dat scharnier zit aan de buitenkant. Zo'n deur kan van binnenuit niet open.",
+            "audioText": "Ik vertrouw dat niet, Timur. Die deur hangt scheef en dat scharnier zit aan de buitenkant. Zo'n deur kan van binnenuit niet open.",
+            "highlightWords": [
+              "vertrouw",
+              "scheef",
+              "buitenkant",
+              "binnenuit"
+            ],
+            "contextNote": "Let op: Chapla waarschuwt letterlijk voor wat er in het volgende hoofdstuk gebeurt!"
+          },
+          {
+            "speaker": "sterreke",
+            "text": "Ik zal buiten aan de deur blijven staan. Als er iets misloopt, ben ik degene die haar opendoet.",
+            "audioText": "Ik zal buiten aan de deur blijven staan. Als er iets misloopt, ben ik degene die haar opendoet.",
+            "highlightWords": [
+              "buiten",
+              "blijven",
+              "misloopt",
+              "opendoet"
+            ],
+            "contextNote": "'Mislopen' = to go wrong. Sterreke denkt vooruit — onthoud dit goed!"
+          }
+        ],
+        "dilemma": {
+          "prompt": "Het wordt donker en de kelder is diep. Wie gaat er naar binnen, en hoe?",
+          "options": [
+            {
+              "id": "opt-1",
+              "text": "Timur en Chapla naar binnen met touw en zaklamp; Sterreke blijft buiten aan de deur; Bulle houdt de wacht op de heuvel.",
+              "isCorrect": true,
+              "feedback": "Uitstekend plan: licht mee, iemand buiten, en iemand die kijkt of er niemand aankomt. Zo gaan echte ontdekkers te werk.",
+              "xp": 30
+            },
+            {
+              "id": "opt-2",
+              "text": "Iedereen tegelijk naar binnen, dat is het spannendst!",
+              "isCorrect": false,
+              "feedback": "Spannend wel — maar als de deur dichtvalt zit dan wel iedereen vast, en niemand kan hulp halen.",
+              "xp": 5
+            },
+            {
+              "id": "opt-3",
+              "text": "Timur gaat alleen, de dieren wachten ver weg bij de fiets.",
+              "isCorrect": false,
+              "feedback": "Alleen een donkere kelder in gaan is precies wat je nooit moet doen. Chapla laat hem sowieso niet gaan.",
+              "xp": 10
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Wat is een ijskelder?",
+            "options": [
+              "Een diepe kelder waar men vroeger winterijs bewaarde",
+              "Een kelder vol ijsjes",
+              "Een koelkast van vroeger op elektriciteit"
+            ],
+            "correctIndex": 0,
+            "explanation": "Men haalde ijs uit de vijver in de winter en bewaarde het ondergronds tot in de zomer."
+          },
+          {
+            "question": "Waarom vertrouwt Chapla de ijzeren deur niet?",
+            "options": [
+              "Het scharnier zit aan de buitenkant, dus van binnen kan ze niet open",
+              "Ze is te klein",
+              "Er zit een slot op"
+            ],
+            "correctIndex": 0,
+            "explanation": "Chapla waarschuwt precies voor wat er in hoofdstuk 4 gebeurt."
+          },
+          {
+            "question": "Wat staat er in de steen bij de deur gekapt?",
+            "options": [
+              "Dezelfde zin als op de kaart",
+              "De naam van de kasteelheer",
+              "Een jaartal"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Wie het moeras bewaart...' — de zin die pas op het einde helemaal duidelijk wordt."
+          },
+          {
+            "question": "Wat betekent 'als er iets misloopt'?",
+            "options": [
+              "Als er iets fout gaat",
+              "Als iemand wegloopt",
+              "Als het begint te regenen"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Mislopen' = to go wrong. En het loopt inderdaad mis..."
+          }
+        ]
+      },
+      {
+        "chapterNumber": 4,
+        "title": "De Deur Gaat Dicht",
+        "location": "In de ijskelder onder Hof ter Vloed, nacht",
+        "narrative": "Binnen is het koud als november. De zaklamp glijdt over bakstenen gewelven, over een put in het midden, over iets in de hoek dat glimt. Timur is nog aan het roepen — 'Chapla! Chapla, hier ligt een KIST!' — wanneer boven hun hoofd de scharnieren gillen. Een streep licht wordt smaller. En smaller. Dan is er een dreun die door de stenen trilt, en daarna nog een: iemand rolt een blok steen tegen de deur. Timurs zaklamp beeft. Buiten klinkt de stem van Victor Grijp, rustig en vriendelijk, alsof hij het weer bespreekt.",
+        "dialogues": [
+          {
+            "speaker": "grijp",
+            "text": "Blijf daar maar wat zitten, kereltje. Ik neem de kaart mee. Niemand weet dat gij hier zijt. Niemand komt hier ooit. Dat is spijtig voor u, maar zo is het leven.",
+            "audioText": "Blijf daar maar wat zitten, kereltje. Ik neem de kaart mee. Niemand weet dat gij hier zijt. Niemand komt hier ooit. Dat is spijtig voor u, maar zo is het leven.",
+            "highlightWords": [
+              "Blijf",
+              "kaart",
+              "Niemand",
+              "spijtig"
+            ],
+            "contextNote": "'Spijtig' = a pity. Grijp zegt de ergste dingen op de vriendelijkste toon — dat maakt hem zo eng."
+          },
+          {
+            "speaker": "timur",
+            "text": "Doe open! Doe die deur open! Chapla, ik krijg hem niet los, hij zit muurvast! Ik... ik krijg geen lucht van de schrik.",
+            "audioText": "Doe open! Doe die deur open! Chapla, ik krijg hem niet los, hij zit muurvast! Ik... ik krijg geen lucht van de schrik.",
+            "highlightWords": [
+              "open",
+              "muurvast",
+              "lucht",
+              "schrik"
+            ],
+            "contextNote": "'Muurvast' = stuck solid. 'Ik heb schrik' is het Vlaamse 'I'm scared' — hier: 'geen lucht van de schrik'."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Timur. Kijk naar mij. Adem in. En uit. Wij zijn nog niet verloren — Sterreke staat buiten, en Bulle ligt op die heuvel. Wij moeten hen alleen laten weten waar wij zijn.",
+            "audioText": "Timur. Kijk naar mij. Adem in. En uit. Wij zijn nog niet verloren — Sterreke staat buiten, en Bulle ligt op die heuvel. Wij moeten hen alleen laten weten waar wij zijn.",
+            "highlightWords": [
+              "Adem",
+              "verloren",
+              "buiten",
+              "weten"
+            ],
+            "contextNote": "Chapla doet precies het juiste: eerst rustig ademen, dan pas denken. 'Verloren' = lost."
+          },
+          {
+            "speaker": "pieke",
+            "text": "Ik zie een gaatje! Daar bovenaan, waar de mortel weg is! Het is te klein voor jullie... maar niet voor mij!",
+            "audioText": "Ik zie een gaatje! Daar bovenaan, waar de mortel weg is! Het is te klein voor jullie... maar niet voor mij!",
+            "highlightWords": [
+              "gaatje",
+              "bovenaan",
+              "klein"
+            ],
+            "contextNote": "'Een gaatje' is het verkleinwoord van 'gat'. Het kleinste dier vindt de kleinste uitweg."
+          }
+        ],
+        "dilemma": {
+          "prompt": "Pieke kan door het luchtgat naar buiten. Wat is de beste boodschap die zij moet doorgeven?",
+          "options": [
+            {
+              "id": "opt-1",
+              "text": "'Sterreke: deur op de heuvel, blok steen ervoor. Bulle: graven aan de zijkant. Vera halen bij de dijk.'",
+              "isCorrect": true,
+              "feedback": "Perfect: wát er is, wáár het is, en wie wat moet doen. Een goede noodboodschap is kort en precies.",
+              "xp": 30
+            },
+            {
+              "id": "opt-2",
+              "text": "'Help! Help! Er is iets ergs gebeurd!'",
+              "isCorrect": false,
+              "feedback": "Iedereen schrikt, maar niemand weet waarheen of wat te doen. Bij hulp roepen hoort altijd: waar, en wat.",
+              "xp": 10
+            },
+            {
+              "id": "opt-3",
+              "text": "Pieke gaat zelf de kist proberen open te maken.",
+              "isCorrect": false,
+              "feedback": "Lief bedoeld, maar een lieveheersbeestje krijgt geen kist open. Haar échte kracht is dat zij naar buiten kan.",
+              "xp": 5
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Hoe sluit Grijp hen op?",
+            "options": [
+              "Hij duwt de deur dicht en rolt er een blok steen voor",
+              "Hij doet de deur op slot met een sleutel",
+              "Hij gooit de put dicht"
+            ],
+            "correctIndex": 0,
+            "explanation": "Daarom kan de deur van binnenuit niet open — precies wat Chapla in hoofdstuk 3 al zag."
+          },
+          {
+            "question": "Wat doet Chapla als Timur in paniek raakt?",
+            "options": [
+              "Ze laat hem eerst rustig ademen en dan pas denken",
+              "Ze roept dat hij harder moet duwen",
+              "Ze wordt zelf ook bang"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Adem in. En uit.' Rustig worden is de eerste stap uit elke paniek."
+          },
+          {
+            "question": "Wie vindt de uitweg?",
+            "options": [
+              "Pieke, door een gaatje waar de mortel weg is",
+              "Timur, met zijn touw",
+              "Bulle, door de deur"
+            ],
+            "correctIndex": 0,
+            "explanation": "Het kleinste dier van het moeras past door het luchtgat."
+          },
+          {
+            "question": "Wat betekent 'de deur zit muurvast'?",
+            "options": [
+              "Hij zit helemaal vast en beweegt niet",
+              "Hij zit in de muur ingebouwd",
+              "Hij is pas geschilderd"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Muurvast' gebruik je voor iets dat totaal niet meer beweegt."
+          }
+        ]
+      },
+      {
+        "chapterNumber": 5,
+        "title": "De Kist en de Vrijbrief",
+        "location": "In en onder de ijskelder, tegen de dageraad",
+        "narrative": "Terwijl Pieke door de nacht vliegt, wacht Chapla niet af. Ze doet wat een reiger het beste kan: stilstaan en kijken. En dan ziet ze het — het water in de put staat niet stil, het draait traag rond. Waar water wegloopt, is een weg. Timur bindt zijn touw om een steen, ze breken de rotte houten deksel van de put en vinden een afvoerkanaal, laag en nat, dat schuin omhoog loopt naar het licht. Maar eerst maken ze de kist open. Er liggen munten in, honderden, goud dat oplicht in de zaklamp alsof het gisteren gepoetst is. En bovenop de munten ligt een plat pakje in geolied leer: een perkament met een groot rood zegel eraan.",
+        "dialogues": [
+          {
+            "speaker": "timur",
+            "text": "Chapla, dit is goud! Echt goud! Wij zijn rijk! Wij... wij zijn zo rijk!",
+            "audioText": "Chapla, dit is goud! Echt goud! Wij zijn rijk! Wij... wij zijn zo rijk!",
+            "highlightWords": [
+              "goud",
+              "rijk"
+            ],
+            "contextNote": "'Rijk' = rich. Timur is twaalf; natuurlijk denkt hij eerst aan de munten."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Lees dat papier eens, Timur. Traag. Ik denk dat dát de echte schat is.",
+            "audioText": "Lees dat papier eens, Timur. Traag. Ik denk dat dát de echte schat is.",
+            "highlightWords": [
+              "Lees",
+              "papier",
+              "echte"
+            ],
+            "contextNote": "Chapla kan niet lezen — maar ze weet wanneer een papier belangrijker is dan goud."
+          },
+          {
+            "speaker": "timur",
+            "text": "'Vrijbrief van het Moeras, anno 1698. Dit moerasland blijft voor altijd van de vogels en van het volk. Niemand mag hier graven, droogleggen of bouwen.' ... Chapla! Dit beschermt jouw moeras!",
+            "audioText": "'Vrijbrief van het Moeras, anno 1698. Dit moerasland blijft voor altijd van de vogels en van het volk. Niemand mag hier graven, droogleggen of bouwen.' ... Chapla! Dit beschermt jouw moeras!",
+            "highlightWords": [
+              "Vrijbrief",
+              "altijd",
+              "graven",
+              "beschermt"
+            ],
+            "contextNote": "'Een vrijbrief' is een oud officieel document met rechten erin. 'Drooggelegd' = drained."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Nu snap ik die zin. 'Wie het moeras bewaart, bewaart de schat.' Ze hebben het goud bij de vrijbrief gelegd zodat iemand de brief zou komen halen. Neem beide mee. En nu naar dat kanaal.",
+            "audioText": "Nu snap ik die zin. 'Wie het moeras bewaart, bewaart de schat.' Ze hebben het goud bij de vrijbrief gelegd zodat iemand de brief zou komen halen. Neem beide mee. En nu naar dat kanaal.",
+            "highlightWords": [
+              "snap",
+              "bewaart",
+              "beide",
+              "kanaal"
+            ],
+            "contextNote": "'Ik snap het' = I get it. Nu klopt alles: het goud was het lokaas voor de brief."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Hoor je dat? Dat is Bulle die graaft. En dat gepiep... dat is Sterreke die die steen wegduwt. Kom, Timur. Naar het licht.",
+            "audioText": "Hoor je dat? Dat is Bulle die graaft. En dat gepiep... dat is Sterreke die die steen wegduwt. Kom, Timur. Naar het licht.",
+            "highlightWords": [
+              "Hoor",
+              "graaft",
+              "wegduwt",
+              "licht"
+            ],
+            "contextNote": "Pieke's boodschap is aangekomen — iedereen doet precies wat er nodig is."
+          }
+        ],
+        "dilemma": {
+          "prompt": "Het afvoerkanaal is nauw en Timur moet zijn rugzak achterlaten. Hij kan maar één ding meenemen. Wat neemt hij?",
+          "options": [
+            {
+              "id": "opt-1",
+              "text": "De vrijbrief. Het goud kunnen ze later halen — dit papier redt het hele moeras.",
+              "isCorrect": true,
+              "feedback": "Juist! En het is ook slim: zonder de vrijbrief kan Grijp gewoon blijven graven. Papier verslaat hier goud.",
+              "xp": 35
+            },
+            {
+              "id": "opt-2",
+              "text": "Zoveel munten als in zijn zakken passen.",
+              "isCorrect": false,
+              "feedback": "Verleidelijk! Maar zware zakken in een nauw kanaal zijn gevaarlijk, en de brief is duizend keer meer waard.",
+              "xp": 10
+            },
+            {
+              "id": "opt-3",
+              "text": "De hele kist meeslepen.",
+              "isCorrect": false,
+              "feedback": "De kist is te groot voor het kanaal. Soms is kiezen wat je achterlaat het belangrijkste van een avontuur.",
+              "xp": 5
+            }
+          ]
+        },
+        "quiz": [
+          {
+            "question": "Hoe vindt Chapla de uitweg?",
+            "options": [
+              "Ze ziet dat het water in de put wegdraait, dus daar is een afvoer",
+              "Ze hoort Bulle door de muur",
+              "Ze breekt de deur open"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Waar water wegloopt, is een weg' — een reiger die stilstaat en kijkt, ziet zulke dingen."
+          },
+          {
+            "question": "Wat ligt er bovenop de munten in de kist?",
+            "options": [
+              "Een perkament met een rood zegel: de vrijbrief",
+              "Een tweede kaart",
+              "Een gouden kroon"
+            ],
+            "correctIndex": 0,
+            "explanation": "De vrijbrief uit 1698 blijkt de échte schat te zijn."
+          },
+          {
+            "question": "Wat staat er in de vrijbrief?",
+            "options": [
+              "Het moeras blijft voor altijd van de vogels en het volk",
+              "Wie het goud vindt, mag het houden",
+              "De kasteelheer bezit het moeras"
+            ],
+            "correctIndex": 0,
+            "explanation": "Niemand mag er graven, droogleggen of bouwen — dat maakt Grijps plannen waardeloos."
+          },
+          {
+            "question": "Waarom lag het goud bij de brief?",
+            "options": [
+              "Als lokaas, zodat iemand de brief zou komen halen",
+              "Om de brief zwaar te maken",
+              "Bij toeval"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Wie het moeras bewaart, bewaart de schat' — precies wat de zin bedoelde."
+          }
+        ]
+      },
+      {
+        "chapterNumber": 6,
+        "title": "Terug naar het Moeras",
+        "location": "Hof ter Vloed en het Grote Moeras, zonsopgang en later",
+        "narrative": "Ze kruipen het kanaal uit in het natte gras, zwart van het slijk, en het eerste wat ze zien is Bulle met modder tot aan zijn oren, en Sterreke met zijn schouder nog tegen het blok steen. Op het pad staat een groene jeep. Boswachter Vera houdt een metaaldetector vast alsof ze hem in beslag heeft genomen — want dat heeft ze ook. Victor Grijp zit op het achterbankje en zegt niets meer. Hij zei eerst heel veel: dat hij een vergunning had, dat het zijn grond was, dat er kinderen zaten te liegen. Toen legde Timur de vrijbrief op de motorkap. En daarna zei Grijp niets meer.",
+        "dialogues": [
+          {
+            "speaker": "vera",
+            "text": "Een reiger, een everzwijn, een kikker in een zakdoek en dát ding daar. Weet ge wat, jongen? Ik ga niet eens vragen. Ik heb alles gezien wat ik moet zien.",
+            "audioText": "Een reiger, een everzwijn, een kikker in een zakdoek en dát ding daar. Weet ge wat, jongen? Ik ga niet eens vragen. Ik heb alles gezien wat ik moet zien.",
+            "highlightWords": [
+              "reiger",
+              "everzwijn",
+              "vragen",
+              "gezien"
+            ],
+            "contextNote": "Vera gelooft Timur meteen. In het Vlaams zegt men vaak 'weet ge wat' als inleiding — 'you know what'."
+          },
+          {
+            "speaker": "timur",
+            "text": "Mevrouw, dat goud mag naar het museum. Maar de vrijbrief... die moet naar het gemeentehuis. Zodat niemand ooit nog in het moeras kan graven.",
+            "audioText": "Mevrouw, dat goud mag naar het museum. Maar de vrijbrief... die moet naar het gemeentehuis. Zodat niemand ooit nog in het moeras kan graven.",
+            "highlightWords": [
+              "museum",
+              "gemeentehuis",
+              "graven"
+            ],
+            "contextNote": "'Het gemeentehuis' = the town hall, waar officiële documenten bewaard worden."
+          },
+          {
+            "speaker": "oude-kikker",
+            "text": "Kwak! Driehonderd jaar heeft dat papier daar liggen wachten. En het wacht op een kikker, een reiger en een jongen uit een ander land. Kwak kwak!",
+            "audioText": "Kwak! Driehonderd jaar heeft dat papier daar liggen wachten. En het wacht op een kikker, een reiger en een jongen uit een ander land. Kwak kwak!",
+            "highlightWords": [
+              "Driehonderd",
+              "wachten",
+              "ander land"
+            ],
+            "contextNote": "Kwaks vat het hele verhaal samen zoals alleen een oude kikker dat kan."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Timur. Kijk eens rond. Dat riet, dat water, die nesten — dat blijft nu. Voor altijd. Dat hebben wij gedaan, gij en ik.",
+            "audioText": "Timur. Kijk eens rond. Dat riet, dat water, die nesten — dat blijft nu. Voor altijd. Dat hebben wij gedaan, gij en ik.",
+            "highlightWords": [
+              "riet",
+              "nesten",
+              "altijd",
+              "gedaan"
+            ],
+            "contextNote": "'Gij en ik' klinkt plechtig en warm tegelijk — Chapla gebruikt het op haar mooiste momenten."
+          },
+          {
+            "speaker": "timur",
+            "text": "De vakantie is bijna gedaan, hè. Ik moet morgen naar huis. Maar ik kom terug, Chapla. Elke zomer. Dat heb ik toch beloofd?",
+            "audioText": "De vakantie is bijna gedaan, hè. Ik moet morgen naar huis. Maar ik kom terug, Chapla. Elke zomer. Dat heb ik toch beloofd?",
+            "highlightWords": [
+              "vakantie",
+              "gedaan",
+              "terug",
+              "beloofd"
+            ],
+            "contextNote": "In Vlaanderen zegt men 'de vakantie is gedaan' voor 'the holiday is over'. En Timur houdt zijn beloftes."
+          },
+          {
+            "speaker": "chapla",
+            "text": "Dat hebt ge. En ik sta hier, op één poot, aan de rand van het riet. Zoals altijd. Tot de volgende zomer, mijn vriend.",
+            "audioText": "Dat hebt ge. En ik sta hier, op één poot, aan de rand van het riet. Zoals altijd. Tot de volgende zomer, mijn vriend.",
+            "highlightWords": [
+              "poot",
+              "rand",
+              "volgende",
+              "vriend"
+            ],
+            "contextNote": "Het verhaal eindigt precies zoals het allereerste verhaal begon: een reiger op één poot. Maar nu niet meer alleen."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Wat maakt dat Grijp niets meer te zeggen heeft?",
+            "options": [
+              "Timur legt de vrijbrief op de motorkap",
+              "Bulle jaagt hem weg",
+              "Hij bekent alles vrijwillig"
+            ],
+            "correctIndex": 0,
+            "explanation": "Het papier bewijst dat niemand in het moeras mag graven — zijn 'vergunning' is waardeloos."
+          },
+          {
+            "question": "Wat stelt Timur voor met de schat?",
+            "options": [
+              "Het goud naar het museum, de vrijbrief naar het gemeentehuis",
+              "Alles verkopen en delen",
+              "Alles terugleggen in de kelder"
+            ],
+            "correctIndex": 0,
+            "explanation": "Zo is het goud veilig én is het moeras officieel beschermd."
+          },
+          {
+            "question": "Wat betekent 'de vakantie is gedaan'?",
+            "options": [
+              "De vakantie is voorbij",
+              "De vakantie is geslaagd",
+              "De vakantie begint"
+            ],
+            "correctIndex": 0,
+            "explanation": "In Vlaanderen betekent 'gedaan' hier: afgelopen, voorbij."
+          },
+          {
+            "question": "Hoe eindigt het verhaal?",
+            "options": [
+              "Chapla staat weer op één poot aan het riet, maar niet meer alleen",
+              "Chapla vliegt weg naar het zuiden",
+              "Timur blijft in het moeras wonen"
+            ],
+            "correctIndex": 0,
+            "explanation": "Precies het beeld waarmee het allereerste Chapla-verhaal begon — maar nu met vrienden."
+          },
+          {
+            "question": "Wie heeft in dit verhaal iedereen gered?",
+            "options": [
+              "Pieke, het kleinste dier, door het luchtgat",
+              "Grijp, per ongeluk",
+              "Vera, meteen aan het begin"
+            ],
+            "correctIndex": 0,
+            "explanation": "Zonder Pieke's boodschap had niemand geweten waar ze waren."
+          }
+        ]
+      }
+    ]
   }
 ];
